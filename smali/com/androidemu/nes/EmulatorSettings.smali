@@ -1048,25 +1048,6 @@
     .line 215
 
     .line 217
-    const-string v5, "gameGripper"
-
-    invoke-virtual {p0, v5}, Lcom/androidemu/nes/EmulatorSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v5
-
-    new-instance v6, Landroid/content/Intent;
-
-    const-string v7, "android.intent.action.VIEW"
-
-    const-string v8, "https://sites.google.com/site/gamegripper"
-
-    invoke-static {v8}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v8
-
-    invoke-direct {v6, v7, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    invoke-virtual {v5, v6}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
     .line 219
     return-void

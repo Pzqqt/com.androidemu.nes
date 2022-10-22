@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:icon="@android:drawable/ic_menu_search" android:id="@id/menu_search_roms" android:title="@string/search_roms" />
     <item android:icon="@android:drawable/ic_menu_preferences" android:id="@id/menu_settings" android:title="@string/settings" />
     <item android:icon="@android:drawable/ic_menu_help" android:id="@id/menu_help" android:title="@string/help" />
 </menu>

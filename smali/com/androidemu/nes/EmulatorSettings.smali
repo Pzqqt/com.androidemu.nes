@@ -1046,17 +1046,6 @@
     invoke-virtual {v5, v6}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
     .line 215
-    const-string v5, "searchRoms"
-
-    invoke-virtual {p0, v5}, Lcom/androidemu/nes/EmulatorSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v5
-
-    invoke-static {}, Lcom/androidemu/nes/EmulatorSettings;->getSearchROMIntent()Landroid/content/Intent;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
     .line 217
     const-string v5, "gameGripper"

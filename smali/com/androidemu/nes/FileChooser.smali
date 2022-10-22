@@ -540,14 +540,6 @@
     invoke-virtual {v3, p0}, Landroid/widget/EditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
     .line 51
-    const v3, 0x7f090007
-
-    invoke-virtual {p0, v3}, Lcom/androidemu/nes/FileChooser;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
     .line 52
     const v3, 0x7f090008
 

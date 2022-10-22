@@ -2,7 +2,6 @@
 <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ImageButton android:id="@id/rom_gripper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/rom_gripper" />
         <ImageButton android:id="@id/goto_sdcard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sdcard" />
         <ImageButton android:id="@id/goto_parent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/up_dir" />
         <EditText android:id="@id/path" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="empty" />
+    <item type="id" name="title_paired_devices" />
+    <item type="id" name="paired_devices" />
+    <item type="id" name="title_new_devices" />
+    <item type="id" name="new_devices" />
+    <item type="id" name="button_scan" />
+    <item type="id" name="emulator" />
+    <item type="id" name="rom_gripper" />
+    <item type="id" name="goto_sdcard" />
+    <item type="id" name="goto_parent" />
+    <item type="id" name="path" />
+    <item type="id" name="cheat_name" />
+    <item type="id" name="cheat_code" />
+    <item type="id" name="profile_name" />
+    <item type="id" name="value" />
+    <item type="id" name="seekbar" />
+    <item type="id" name="name" />
+    <item type="id" name="screenshot" />
+    <item type="id" name="detail" />
+    <item type="id" name="ip_address" />
+    <item type="id" name="port" />
+    <item type="id" name="menu_add_cheat" />
+    <item type="id" name="menu_netplay_sync" />
+    <item type="id" name="menu_load_state" />
+    <item type="id" name="menu_save_state" />
+    <item type="id" name="menu_settings" />
+    <item type="id" name="menu_change_disk" />
+    <item type="id" name="menu_fast_forward" />
+    <item type="id" name="menu_cheats" />
+    <item type="id" name="menu_netplay_connect" />
+    <item type="id" name="menu_bluetooth_server" />
+    <item type="id" name="menu_bluetooth_client" />
+    <item type="id" name="menu_wifi_server" />
+    <item type="id" name="menu_wifi_client" />
+    <item type="id" name="menu_netplay_disconnect" />
+    <item type="id" name="menu_reset" />
+    <item type="id" name="menu_power" />
+    <item type="id" name="menu_screenshot" />
+    <item type="id" name="menu_close" />
+    <item type="id" name="menu_rom_gripper" />
+    <item type="id" name="menu_refresh" />
+    <item type="id" name="menu_new_profile" />
+    <item type="id" name="menu_search_roms" />
+    <item type="id" name="menu_help" />
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="exit_game_options">
+        <item>返回游戏</item>
+        <item>保存关闭</item>
+        <item>退出游戏</item>
+    </string-array>
+    <string-array name="scaling_mode_entries">
+        <item>拉伸画面</item>
+        <item>缩放画面</item>
+        <item>二倍放大</item>
+        <item>原始画面</item>
+    </string-array>
+    <string-array name="aspect_ratio_entries">
+        <item>默认</item>
+        <item>4:3 (电视)</item>
+        <item>5:4</item>
+        <item>16:10</item>
+        <item>16:9</item>
+    </string-array>
+    <string-array name="frame_skip_entries">
+        <item>自动跳帧</item>
+        <item>手动跳帧</item>
+    </string-array>
+    <string-array name="refresh_rate_entries">
+        <item>默认</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+    </string-array>
+    <string-array name="second_controller_entries">
+        <item>无</item>
+        <item>Zapper (光枪)</item>
+        <item>游戏手柄</item>
+    </string-array>
+    <string-array name="vkeypad_size_entries">
+        <item>大</item>
+        <item>中</item>
+        <item>小</item>
+    </string-array>
+    <string-array name="vkeypad_layout_entries">
+        <item>底部 + 底部</item>
+        <item>底部 + 顶部​​​​​​​​​​</item>
+        <item>顶部 + 底部​​​​​​​​​​</item>
+        <item>顶部 + 顶部</item>
+    </string-array>
+    <string-array name="orientation_entries">
+        <item>默认</item>
+        <item>横屏模式</item>
+        <item>竖屏模式</item>
+    </string-array>
+    <string-array name="auto_sync_client_entries">
+        <item>10 秒</item>
+        <item>20 秒</item>
+        <item>30 秒</item>
+        <item>45 秒</item>
+        <item>60 秒</item>
+    </string-array>
+</resources>

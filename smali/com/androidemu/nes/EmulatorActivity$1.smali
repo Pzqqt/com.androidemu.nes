@@ -49,14 +49,51 @@
     :goto_0
     return-void
 
-    .line 791
     :pswitch_0
     iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
 
     invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$000(Lcom/androidemu/nes/EmulatorActivity;)V
 
-    .line 794
+    goto :goto_0
+
     :pswitch_1
+    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
+
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$001(Lcom/androidemu/nes/EmulatorActivity;)V
+
+    goto :goto_0
+
+    :pswitch_2
+    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
+
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$002(Lcom/androidemu/nes/EmulatorActivity;)V
+
+    goto :goto_0
+
+    :pswitch_3
+
+    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
+
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$003(Lcom/androidemu/nes/EmulatorActivity;)V
+
+    goto :goto_0
+
+    :pswitch_4
+
+    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
+
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$004(Lcom/androidemu/nes/EmulatorActivity;)V
+
+    goto :goto_0
+
+    :pswitch_5
+    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
+
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$005(Lcom/androidemu/nes/EmulatorActivity;)V
+
+    goto :goto_0
+
+    :pswitch_6
     iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
 
     invoke-virtual {v0}, Lcom/androidemu/nes/EmulatorActivity;->finish()V
@@ -67,8 +104,13 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x1
+    .packed-switch 0x0
         :pswitch_0
         :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+        :pswitch_6
     .end packed-switch
 .end method

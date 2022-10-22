@@ -130,9 +130,52 @@
     .locals 0
     .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
 
-    .prologue
-    .line 54
-    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->quickSave()V
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->onLoadState()V
+
+    return-void
+.end method
+
+.method static synthetic access$001(Lcom/androidemu/nes/EmulatorActivity;)V
+    .locals 0
+    .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
+
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->onSaveState()V
+
+    return-void
+.end method
+
+.method static synthetic access$002(Lcom/androidemu/nes/EmulatorActivity;)V
+    .locals 0
+    .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
+
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->onFastForward()V
+
+    return-void
+.end method
+
+.method static synthetic access$003(Lcom/androidemu/nes/EmulatorActivity;)V
+    .locals 0
+    .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
+
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->doReset()V
+
+    return-void
+.end method
+
+.method static synthetic access$004(Lcom/androidemu/nes/EmulatorActivity;)V
+    .locals 0
+    .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
+
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->doPower()V
+
+    return-void
+.end method
+
+.method static synthetic access$005(Lcom/androidemu/nes/EmulatorActivity;)V
+    .locals 0
+    .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
+
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->onScreenshot()V
 
     return-void
 .end method
@@ -472,12 +515,6 @@
 
     invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f060010
-
-    invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v1
-
     const v2, 0x7f05000b
 
     invoke-virtual {v1, v2, v0}, Landroid/app/AlertDialog$Builder;->setItems(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
@@ -597,6 +634,68 @@
     move-result-object v1
 
     return-object v1
+.end method
+
+.method private doPower()V
+    .locals 1
+
+    new-instance v0, Landroid/content/Intent;
+
+    :try_start_0
+    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity;->netPlayService:Lcom/androidemu/nes/NetPlayService;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity;->netPlayService:Lcom/androidemu/nes/NetPlayService;
+
+    invoke-virtual {v0}, Lcom/androidemu/nes/NetPlayService;->sendPowerROM()V
+
+    :cond_1
+    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity;->emulator:Lcom/androidemu/Emulator;
+
+    invoke-virtual {v0}, Lcom/androidemu/Emulator;->power()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :goto_0
+
+    return-void
+.end method
+
+.method private doReset()V
+    .locals 1
+
+    new-instance v0, Landroid/content/Intent;
+
+    :try_start_0
+    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity;->netPlayService:Lcom/androidemu/nes/NetPlayService;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity;->netPlayService:Lcom/androidemu/nes/NetPlayService;
+
+    invoke-virtual {v0}, Lcom/androidemu/nes/NetPlayService;->sendResetROM()V
+
+    :cond_1
+    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity;->emulator:Lcom/androidemu/Emulator;
+
+    invoke-virtual {v0}, Lcom/androidemu/Emulator;->reset()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :goto_0
+
+    return-void
 .end method
 
 .method private ensureDiscoverable()V
@@ -3588,59 +3687,13 @@
 
     goto :goto_0
 
-    .line 342
     :pswitch_2
-    :try_start_0
-    iget-object v1, p0, Lcom/androidemu/nes/EmulatorActivity;->netPlayService:Lcom/androidemu/nes/NetPlayService;
-
-    if-eqz v1, :cond_1
-
-    .line 343
-    iget-object v1, p0, Lcom/androidemu/nes/EmulatorActivity;->netPlayService:Lcom/androidemu/nes/NetPlayService;
-
-    invoke-virtual {v1}, Lcom/androidemu/nes/NetPlayService;->sendResetROM()V
-
-    .line 344
-    :cond_1
-    iget-object v1, p0, Lcom/androidemu/nes/EmulatorActivity;->emulator:Lcom/androidemu/Emulator;
-
-    invoke-virtual {v1}, Lcom/androidemu/Emulator;->reset()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->doReset()V
 
     goto :goto_0
 
-    .line 345
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
-
-    .line 350
     :pswitch_3
-    :try_start_1
-    iget-object v1, p0, Lcom/androidemu/nes/EmulatorActivity;->netPlayService:Lcom/androidemu/nes/NetPlayService;
-
-    if-eqz v1, :cond_2
-
-    .line 351
-    iget-object v1, p0, Lcom/androidemu/nes/EmulatorActivity;->netPlayService:Lcom/androidemu/nes/NetPlayService;
-
-    invoke-virtual {v1}, Lcom/androidemu/nes/NetPlayService;->sendPowerROM()V
-
-    .line 352
-    :cond_2
-    iget-object v1, p0, Lcom/androidemu/nes/EmulatorActivity;->emulator:Lcom/androidemu/Emulator;
-
-    invoke-virtual {v1}, Lcom/androidemu/Emulator;->power()V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_0
-
-    .line 353
-    :catch_1
-    move-exception v1
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->doPower()V
 
     goto :goto_0
 

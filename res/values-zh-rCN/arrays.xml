@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="exit_game_options">
-        <item>载入进度</item>
-        <item>保存进度</item>
-        <item>游戏加速</item>
-        <item>重新开始</item>
-        <item>电源开关</item>
-        <item>屏幕截图</item>
-        <item>关闭</item>
-    </string-array>
     <string-array name="scaling_mode_entries">
         <item>拉伸画面</item>
         <item>缩放画面</item>

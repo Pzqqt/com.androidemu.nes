@@ -42,60 +42,45 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 789
+
+    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
+
     packed-switch p2, :pswitch_data_0
 
-    .line 797
     :goto_0
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
-
     invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$000(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
     :pswitch_1
-    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
-
     invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$001(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
     :pswitch_2
-    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
-
     invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$002(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
     :pswitch_3
-
-    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
-
     invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$003(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
     :pswitch_4
-
-    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
-
     invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$004(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
     :pswitch_5
-    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
-
     invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$005(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
     :pswitch_6
-    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$1;->this$0:Lcom/androidemu/nes/EmulatorActivity;
-
     invoke-virtual {v0}, Lcom/androidemu/nes/EmulatorActivity;->finish()V
 
     goto :goto_0

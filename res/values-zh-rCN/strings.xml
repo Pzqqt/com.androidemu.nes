@@ -17,16 +17,16 @@
     <string name="replace_game_title">替换游戏</string>
     <string name="replace_game_message">当前游戏进度将会丢失，是否重新开始游戏？</string>
     <string name="quit_game_title">关闭游戏</string>
-    <string name="load_state_title">读取进度</string>
+    <string name="load_state_title">载入进度</string>
     <string name="save_state_title">保存进度</string>
     <string name="slot_quick">快速存档</string>
     <string name="slot_nth">插槽 %1$d</string>
     <string name="slot_empty">&lt;空的></string>
-    <string name="settings">常规设置​​​​</string>
+    <string name="settings">设置​​​​</string>
     <string name="reset">重新开始</string>
     <string name="power">电源开关</string>
-    <string name="change_disk">替换游戏</string>
-    <string name="disk_side">游戏 %1$d 游戏 %2$c</string>
+    <string name="change_disk">切换磁碟</string>
+    <string name="disk_side">磁碟 %1$d %2$c 面</string>
     <string name="netplay_connect">联网对战</string>
     <string name="netplay_disconnect">断开连接</string>
     <string name="wifi_server">Wi-Fi (服务端)</string>
@@ -53,7 +53,7 @@ IP: %1$s
     <string name="client_connecting">正在连接设备...</string>
     <string name="bluetooth_server_listening">"正在等候连接...
 
-点击这里使这个装置被使用"</string>
+点击这里使本设备可被发现"</string>
     <string name="ip_address">IP:</string>
     <string name="port">端口:</string>
     <string name="invalid_ip_address">IP 地址无效</string>
@@ -66,7 +66,7 @@ IP: %1$s
     <string name="save_profile">保存配置</string>
     <string name="scanning">正在扫描设备...</string>
     <string name="select_device">选择要连接的设备</string>
-    <string name="none_paired">未配对设备</string>
+    <string name="none_paired">未配对任何设备</string>
     <string name="none_found">未找到设备</string>
     <string name="title_paired_devices">已配对设备</string>
     <string name="title_other_devices">其他可用设备</string>

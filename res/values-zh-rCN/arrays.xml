@@ -30,6 +30,7 @@
         <item>游戏手柄</item>
     </string-array>
     <string-array name="vkeypad_size_entries">
+        <item>非常大</item>
         <item>大</item>
         <item>中</item>
         <item>小</item>

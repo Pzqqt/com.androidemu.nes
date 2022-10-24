@@ -504,13 +504,26 @@
 
     if-eqz v1, :cond_1
 
-    .line 137
-    const v1, 0x3faaaa8f
+    const v1, 0x3faaaa8f    # 1.33333f
 
     goto :goto_0
 
-    .line 138
     :cond_1
+
+    const-string v1, "very_large"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const v1, 0x3fd5551d    # 1.66666f
+
+    goto :goto_0
+
+    :cond_2
+
     const v1, 0x3f99999a    # 1.2f
 
     goto :goto_0

@@ -43,6 +43,7 @@
         <item>gamepad</item>
     </string-array>
     <string-array name="vkeypad_size_entryvalues">
+        <item>very_large</item>
         <item>large</item>
         <item>medium</item>
         <item>small</item>
@@ -106,6 +107,7 @@
         <item>Gamepad</item>
     </string-array>
     <string-array name="vkeypad_size_entries">
+        <item>Very Large</item>
         <item>Large</item>
         <item>Medium</item>
         <item>Small</item>

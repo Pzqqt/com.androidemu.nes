@@ -59,6 +59,10 @@
 
 .field private scaleY:F
 
+.field private marginX:I
+
+.field private marginY:I
+
 .field private selectStart:Lcom/androidemu/nes/input/VirtualKeypad$Control;
 
 .field private transparency:I
@@ -832,8 +836,6 @@
     .param p2, "h"    # I
 
     .prologue
-    const/4 v4, 0x0
-
     .line 148
     iget-object v1, p0, Lcom/androidemu/nes/input/VirtualKeypad;->dpad:Lcom/androidemu/nes/input/VirtualKeypad$Control;
 
@@ -871,6 +873,10 @@
     sub-int v2, p2, v2
 
     int-to-float v2, v2
+
+    iget v4, p0, Lcom/androidemu/nes/input/VirtualKeypad;->marginX:I
+
+    int-to-float v4, v4
 
     invoke-virtual {v1, v4, v2}, Lcom/androidemu/nes/input/VirtualKeypad$Control;->move(FF)V
 
@@ -1011,6 +1017,8 @@
 
     int-to-float v2, v0
 
+    const/4 v4, 0x0
+
     invoke-virtual {v1, v2, v4}, Lcom/androidemu/nes/input/VirtualKeypad$Control;->move(FF)V
 
     goto/16 :goto_0
@@ -1025,8 +1033,6 @@
     .line 202
     iget-object v2, p0, Lcom/androidemu/nes/input/VirtualKeypad;->dpad:Lcom/androidemu/nes/input/VirtualKeypad$Control;
 
-    const/4 v3, 0x0
-
     iget-object v4, p0, Lcom/androidemu/nes/input/VirtualKeypad;->dpad:Lcom/androidemu/nes/input/VirtualKeypad$Control;
 
     invoke-virtual {v4}, Lcom/androidemu/nes/input/VirtualKeypad$Control;->getHeight()I
@@ -1037,10 +1043,14 @@
 
     int-to-float v4, v4
 
+    iget v3, p0, Lcom/androidemu/nes/input/VirtualKeypad;->marginX:I
+
+    int-to-float v3, v3
+
     invoke-virtual {v2, v3, v4}, Lcom/androidemu/nes/input/VirtualKeypad$Control;->move(FF)V
 
     .line 204
-    const/4 v1, 0x0
+    iget v1, p0, Lcom/androidemu/nes/input/VirtualKeypad;->marginY:I
 
     .line 205
     .local v1, "y":I
@@ -1147,12 +1157,19 @@
     .param p2, "h"    # I
 
     .prologue
-    const/4 v2, 0x0
 
     .line 190
     iget-object v1, p0, Lcom/androidemu/nes/input/VirtualKeypad;->dpad:Lcom/androidemu/nes/input/VirtualKeypad$Control;
 
-    invoke-virtual {v1, v2, v2}, Lcom/androidemu/nes/input/VirtualKeypad$Control;->move(FF)V
+    iget v2, p0, Lcom/androidemu/nes/input/VirtualKeypad;->marginX:I
+
+    int-to-float v2, v2
+
+    iget v3, p0, Lcom/androidemu/nes/input/VirtualKeypad;->marginY:I
+
+    int-to-float v3, v3
+
+    invoke-virtual {v1, v2, v3}, Lcom/androidemu/nes/input/VirtualKeypad$Control;->move(FF)V
 
     .line 191
     iget-object v1, p0, Lcom/androidemu/nes/input/VirtualKeypad;->buttons:Lcom/androidemu/nes/input/VirtualKeypad$Control;
@@ -1265,8 +1282,6 @@
     .param p2, "h"    # I
 
     .prologue
-    const/4 v3, 0x0
-
     .line 171
     iget-object v1, p0, Lcom/androidemu/nes/input/VirtualKeypad;->dpad:Lcom/androidemu/nes/input/VirtualKeypad$Control;
 
@@ -1295,10 +1310,18 @@
     :cond_0
     iget-object v1, p0, Lcom/androidemu/nes/input/VirtualKeypad;->dpad:Lcom/androidemu/nes/input/VirtualKeypad$Control;
 
-    invoke-virtual {v1, v3, v3}, Lcom/androidemu/nes/input/VirtualKeypad$Control;->move(FF)V
+    iget v2, p0, Lcom/androidemu/nes/input/VirtualKeypad;->marginX:I
+
+    int-to-float v2, v2
+
+    iget v3, p0, Lcom/androidemu/nes/input/VirtualKeypad;->marginY:I
+
+    int-to-float v3, v3
+
+    invoke-virtual {v1, v2, v3}, Lcom/androidemu/nes/input/VirtualKeypad$Control;->move(FF)V
 
     .line 178
-    const/4 v0, 0x0
+    iget v0, p0, Lcom/androidemu/nes/input/VirtualKeypad;->marginY:I
 
     .line 179
     .local v0, "y":I
@@ -2080,6 +2103,8 @@
 
     .line 118
     .local v5, "marginX":I
+    iput v5, v0, Lcom/androidemu/nes/input/VirtualKeypad;->marginX:I
+
     int-to-float v13, v4
 
     move-object/from16 v0, p0
@@ -2092,6 +2117,8 @@
 
     .line 119
     .local v6, "marginY":I
+    iput v6, v0, Lcom/androidemu/nes/input/VirtualKeypad;->marginY:I
+
     sub-int v13, p1, v5
 
     sub-int v14, p2, v6

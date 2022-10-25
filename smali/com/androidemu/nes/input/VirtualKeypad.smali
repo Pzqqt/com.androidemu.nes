@@ -2103,7 +2103,7 @@
     .line 121
     const-string v13, "vkeypadTransparency"
 
-    const/16 v14, 0x32
+    const/16 v14, 0x4b
 
     invoke-interface {v7, v13, v14}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 

@@ -42,7 +42,7 @@
             </PreferenceCategory>
             <PreferenceCategory android:title="@string/appearance">
                 <ListPreference android:entries="@array/vkeypad_size_entries" android:title="@string/vkeypad_size" android:key="vkeypadSize" android:defaultValue="medium" android:entryValues="@array/vkeypad_size_entryvalues" />
-                <com.androidemu.nes.SeekBarPreference android:title="@string/vkeypad_transparency" android:key="vkeypadTransparency" android:defaultValue="50" />
+                <com.androidemu.nes.SeekBarPreference android:title="@string/vkeypad_transparency" android:key="vkeypadTransparency" android:defaultValue="75" />
                 <PreferenceScreen android:title="@string/hide_controls" android:key="hideControls">
                     <CheckBoxPreference android:title="@string/hide_dpad" android:key="hideDpad" />
                     <CheckBoxPreference android:title="@string/hide_buttons" android:key="hideButtons" />

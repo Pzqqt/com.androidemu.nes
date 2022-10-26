@@ -7,6 +7,8 @@
             <com.androidemu.nes.SeekBarPreference android:title="@string/sound_volume" android:key="soundVolume" android:dependency="soundEnabled" android:defaultValue="100" />
         </PreferenceCategory>
         <PreferenceCategory android:title="@string/video_settings">
+            <ListPreference android:entries="@array/orientation_entries" android:title="@string/orientation" android:key="orientation" android:summary="@string/orientation_summary" android:defaultValue="unspecified" android:entryValues="@array/orientation_entryvalues" />
+            <CheckBoxPreference android:title="@string/full_screen_mode" android:key="fullScreenMode" android:summary="@string/full_screen_mode_summary" android:defaultValue="true" />
             <ListPreference android:entries="@array/scaling_mode_entries" android:title="@string/scaling_mode" android:key="scalingMode" android:defaultValue="proportional" android:entryValues="@array/scaling_mode_entryvalues" />
             <ListPreference android:entries="@array/aspect_ratio_entries" android:title="@string/aspect_ratio" android:key="aspectRatio" android:defaultValue="1.3333" android:entryValues="@array/aspect_ratio_entryvalues" />
             <CheckBoxPreference android:title="@string/accurate_rendering" android:key="accurateRendering" android:summary="@string/accurate_rendering_summary" />
@@ -74,8 +76,6 @@
             <PreferenceScreen android:title="@string/fds_rom" android:key="fdsRom" />
         </PreferenceCategory>
         <PreferenceCategory android:title="@string/user_settings">
-            <ListPreference android:entries="@array/orientation_entries" android:title="@string/orientation" android:key="orientation" android:summary="@string/orientation_summary" android:defaultValue="unspecified" android:entryValues="@array/orientation_entryvalues" />
-            <CheckBoxPreference android:title="@string/full_screen_mode" android:key="fullScreenMode" android:summary="@string/full_screen_mode_summary" android:defaultValue="true" />
             <CheckBoxPreference android:title="@string/quick_load_on_start" android:key="quickLoadOnStart" android:summary="@string/quick_load_on_start_summary" android:defaultValue="true" />
             <CheckBoxPreference android:title="@string/use_input_method" android:key="useInputMethod" android:summary="@string/use_input_method_summary" />
             <PreferenceScreen android:title="@string/shortcut_keys">

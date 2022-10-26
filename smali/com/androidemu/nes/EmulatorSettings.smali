@@ -477,32 +477,6 @@
     return-object v2
 .end method
 
-.method public static getSearchROMIntent()Landroid/content/Intent;
-    .locals 3
-
-    .prologue
-    .line 121
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "android.intent.action.VIEW"
-
-    const-string v2, "http://www.romfind.com/nes-roms.html?sid=YONG"
-
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    const/high16 v1, 0x10000000
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method private setKeyMappings(Ljava/util/Map;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;

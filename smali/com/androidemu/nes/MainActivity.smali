@@ -342,12 +342,6 @@
 
     .line 53
     :sswitch_0
-    invoke-static {}, Lcom/androidemu/nes/EmulatorSettings;->getSearchROMIntent()Landroid/content/Intent;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/androidemu/nes/MainActivity;->startActivity(Landroid/content/Intent;)V
-
     goto :goto_0
 
     .line 57

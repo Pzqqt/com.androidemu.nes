@@ -249,62 +249,6 @@
     return-object v0
 .end method
 
-.method private startROMGripper()V
-    .locals 4
-
-    .prologue
-    .line 216
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "com.bingo.rom_gripper.action.ROM_LIST"
-
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 217
-    .local v1, "intent":Landroid/content/Intent;
-    const-string v2, "romtype"
-
-    const-string v3, "NES"
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 218
-    const/high16 v2, 0x10000000
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    .line 220
-    :try_start_0
-    invoke-virtual {p0, v1}, Lcom/androidemu/nes/FileChooser;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 225
-    :goto_0
-    return-void
-
-    .line 221
-    :catch_0
-    move-exception v0
-
-    .line 222
-    .local v0, "e":Landroid/content/ActivityNotFoundException;
-    new-instance v1, Landroid/content/Intent;
-
-    .end local v1    # "intent":Landroid/content/Intent;
-    const-string v2, "android.intent.action.VIEW"
-
-    sget-object v3, Lcom/androidemu/nes/FileChooser;->ROM_GRIPPER_URI:Landroid/net/Uri;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    .line 223
-    .restart local v1    # "intent":Landroid/content/Intent;
-    invoke-virtual {p0, v1}, Lcom/androidemu/nes/FileChooser;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
-.end method
-
 
 # virtual methods
 .method public accept(Ljava/io/File;)Z
@@ -459,8 +403,6 @@
 
     .line 150
     :pswitch_0
-    invoke-direct {p0}, Lcom/androidemu/nes/FileChooser;->startROMGripper()V
-
     goto :goto_0
 
     .line 154
@@ -844,8 +786,6 @@
 
     .line 90
     :pswitch_1
-    invoke-direct {p0}, Lcom/androidemu/nes/FileChooser;->startROMGripper()V
-
     goto :goto_0
 
     .line 84

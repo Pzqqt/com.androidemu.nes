@@ -2,6 +2,7 @@
 <resources>
     <string-array name="file_chooser_filters">
         <item>.nes</item>
+        <item>.nsf</item>
         <item>.fds</item>
         <item>.zip</item>
     </string-array>

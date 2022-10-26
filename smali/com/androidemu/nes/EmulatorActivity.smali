@@ -63,8 +63,6 @@
 
 .field private fdsTotalSides:I
 
-.field private flipScreen:Z
-
 .field private inFastForward:Z
 
 .field private keyboard:Lcom/androidemu/nes/input/Keyboard;
@@ -724,55 +722,6 @@
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     return-void
-.end method
-
-.method private flipGameKeys(I)I
-    .locals 2
-    .param p1, "keys"    # I
-
-    .prologue
-    .line 727
-    and-int/lit16 v0, p1, -0xf1
-
-    .line 728
-    .local v0, "newKeys":I
-    and-int/lit8 v1, p1, 0x40
-
-    if-eqz v1, :cond_0
-
-    .line 729
-    or-int/lit16 v0, v0, 0x80
-
-    .line 730
-    :cond_0
-    and-int/lit16 v1, p1, 0x80
-
-    if-eqz v1, :cond_1
-
-    .line 731
-    or-int/lit8 v0, v0, 0x40
-
-    .line 732
-    :cond_1
-    and-int/lit8 v1, p1, 0x10
-
-    if-eqz v1, :cond_2
-
-    .line 733
-    or-int/lit8 v0, v0, 0x20
-
-    .line 734
-    :cond_2
-    and-int/lit8 v1, p1, 0x20
-
-    if-eqz v1, :cond_3
-
-    .line 735
-    or-int/lit8 v0, v0, 0x10
-
-    .line 737
-    :cond_3
-    return v0
 .end method
 
 .method private getEmulatorEngine(Landroid/content/SharedPreferences;)Ljava/lang/String;
@@ -2660,50 +2609,6 @@
     goto :goto_1
 .end method
 
-.method private setFlipScreen(Landroid/content/SharedPreferences;Landroid/content/res/Configuration;)V
-    .locals 3
-    .param p1, "prefs"    # Landroid/content/SharedPreferences;
-    .param p2, "config"    # Landroid/content/res/Configuration;
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 718
-    iget v0, p2, Landroid/content/res/Configuration;->orientation:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    .line 719
-    const-string v0, "flipScreen"
-
-    invoke-interface {p1, v0, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/androidemu/nes/EmulatorActivity;->flipScreen:Z
-
-    .line 723
-    :goto_0
-    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity;->emulator:Lcom/androidemu/Emulator;
-
-    const-string v1, "flipScreen"
-
-    iget-boolean v2, p0, Lcom/androidemu/nes/EmulatorActivity;->flipScreen:Z
-
-    invoke-virtual {v0, v1, v2}, Lcom/androidemu/Emulator;->setOption(Ljava/lang/String;Z)V
-
-    .line 724
-    return-void
-
-    .line 721
-    :cond_0
-    iput-boolean v2, p0, Lcom/androidemu/nes/EmulatorActivity;->flipScreen:Z
-
-    goto :goto_0
-.end method
-
 .method private setGameSpeed(F)V
     .locals 3
     .param p1, "speed"    # F
@@ -2913,23 +2818,6 @@
     .end packed-switch
 .end method
 
-.method public onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 1
-    .param p1, "newConfig"    # Landroid/content/res/Configuration;
-
-    .prologue
-    .line 211
-    invoke-super {p0, p1}, Landroid/app/Activity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
-
-    .line 213
-    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity;->sharedPrefs:Landroid/content/SharedPreferences;
-
-    invoke-direct {p0, v0, p1}, Lcom/androidemu/nes/EmulatorActivity;->setFlipScreen(Landroid/content/SharedPreferences;Landroid/content/res/Configuration;)V
-
-    .line 214
-    return-void
-.end method
-
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 10
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
@@ -3060,7 +2948,7 @@
 
     aput-object v7, v4, v6
 
-    const-string v6, "flipScreen"
+    const-string v6, "_flipScreen"    # Deprecated
 
     aput-object v6, v4, v8
 
@@ -3502,17 +3390,6 @@
 
     .line 594
     :cond_0
-    iget-boolean v1, p0, Lcom/androidemu/nes/EmulatorActivity;->flipScreen:Z
-
-    if-eqz v1, :cond_1
-
-    .line 595
-    invoke-direct {p0, v0}, Lcom/androidemu/nes/EmulatorActivity;->flipGameKeys(I)I
-
-    move-result v0
-
-    .line 597
-    :cond_1
     iget-object v1, p0, Lcom/androidemu/nes/EmulatorActivity;->vkeypad:Lcom/androidemu/nes/input/VirtualKeypad;
 
     if-eqz v1, :cond_2
@@ -4187,29 +4064,6 @@
     .line 472
     .end local v0    # "attrs":Landroid/view/WindowManager$LayoutParams;
     :cond_3
-    const-string v7, "flipScreen"
-
-    invoke-virtual {v7, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_4
-
-    .line 473
-    invoke-virtual {p0}, Lcom/androidemu/nes/EmulatorActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v5
-
-    invoke-direct {p0, p1, v5}, Lcom/androidemu/nes/EmulatorActivity;->setFlipScreen(Landroid/content/SharedPreferences;Landroid/content/res/Configuration;)V
-
-    goto :goto_0
-
-    .line 475
-    :cond_4
     const-string v7, "fastForwardSpeed"
 
     invoke-virtual {v7, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4977,9 +4831,7 @@
     .line 678
     iget-object v2, p0, Lcom/androidemu/nes/EmulatorActivity;->vkeypad:Lcom/androidemu/nes/input/VirtualKeypad;
 
-    iget-boolean v3, p0, Lcom/androidemu/nes/EmulatorActivity;->flipScreen:Z
-
-    invoke-virtual {v2, p2, v3}, Lcom/androidemu/nes/input/VirtualKeypad;->onTouch(Landroid/view/MotionEvent;Z)Z
+    invoke-virtual {v2, p2}, Lcom/androidemu/nes/input/VirtualKeypad;->onTouch(Landroid/view/MotionEvent;)Z
 
     move-result v2
 
@@ -5034,24 +4886,7 @@
 
     div-int v1, v2, v3
 
-    .line 685
     .local v1, "y":I
-    iget-boolean v2, p0, Lcom/androidemu/nes/EmulatorActivity;->flipScreen:Z
-
-    if-eqz v2, :cond_1
-
-    .line 686
-    iget v2, p0, Lcom/androidemu/nes/EmulatorActivity;->surfaceWidth:I
-
-    sub-int v0, v2, v0
-
-    .line 687
-    iget v2, p0, Lcom/androidemu/nes/EmulatorActivity;->surfaceHeight:I
-
-    sub-int v1, v2, v1
-
-    .line 689
-    :cond_1
     iget-object v2, p0, Lcom/androidemu/nes/EmulatorActivity;->surfaceRegion:Landroid/graphics/Rect;
 
     invoke-virtual {v2, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
@@ -5109,20 +4944,7 @@
 
     move-result v3
 
-    .line 612
     .local v3, "dy":F
-    iget-boolean v6, p0, Lcom/androidemu/nes/EmulatorActivity;->flipScreen:Z
-
-    if-eqz v6, :cond_0
-
-    .line 613
-    neg-float v2, v2
-
-    .line 614
-    neg-float v3, v3
-
-    .line 617
-    :cond_0
     iget v6, p0, Lcom/androidemu/nes/EmulatorActivity;->trackballSensitivity:I
 
     int-to-float v6, v6

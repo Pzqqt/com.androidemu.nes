@@ -74,7 +74,6 @@
             <PreferenceScreen android:title="@string/fds_rom" android:key="fdsRom" />
         </PreferenceCategory>
         <PreferenceCategory android:title="@string/user_settings">
-            <CheckBoxPreference android:title="@string/flip_screen" android:key="flipScreen" android:summary="@string/flip_screen_summary" />
             <ListPreference android:entries="@array/orientation_entries" android:title="@string/orientation" android:key="orientation" android:summary="@string/orientation_summary" android:defaultValue="unspecified" android:entryValues="@array/orientation_entryvalues" />
             <CheckBoxPreference android:title="@string/full_screen_mode" android:key="fullScreenMode" android:summary="@string/full_screen_mode_summary" android:defaultValue="true" />
             <CheckBoxPreference android:title="@string/quick_load_on_start" android:key="quickLoadOnStart" android:summary="@string/quick_load_on_start_summary" android:defaultValue="true" />

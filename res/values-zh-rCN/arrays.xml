@@ -45,6 +45,8 @@
         <item>默认</item>
         <item>横屏</item>
         <item>竖屏</item>
+        <item>反向横屏</item>
+        <item>自动旋转</item>
     </string-array>
     <string-array name="auto_sync_client_entries">
         <item>10 秒</item>

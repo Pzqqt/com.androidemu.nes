@@ -59,6 +59,8 @@
         <item>unspecified</item>
         <item>landscape</item>
         <item>portrait</item>
+        <item>reverse_landscape</item>
+        <item>sensor</item>
     </string-array>
     <string-array name="auto_sync_client_entryvalues">
         <item>10</item>
@@ -123,6 +125,8 @@
         <item>Unspecified</item>
         <item>Landscape</item>
         <item>Portrait</item>
+        <item>Reverse landscape</item>
+        <item>Auto rotate</item>
     </string-array>
     <string-array name="auto_sync_client_entries">
         <item>10 seconds</item>

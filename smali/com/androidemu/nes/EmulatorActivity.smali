@@ -883,7 +883,7 @@
 .end method
 
 .method private static getScreenOrientation(Ljava/lang/String;)I
-    .locals 1
+    .locals 3
     .param p0, "orientation"    # Ljava/lang/String;
 
     .prologue
@@ -920,6 +920,38 @@
 
     .line 755
     :cond_1
+    const-string v0, "sensor"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x4
+
+    goto :goto_0
+
+    :cond_2
+    const-string v0, "reverse_landscape"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x9
+
+    if-lt v1, v2, :goto_0
+
+    const/16 v0, 0x8
+
+    goto :goto_0
+
+    :cond_3
     const/4 v0, -0x1
 
     goto :goto_0

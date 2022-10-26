@@ -60,7 +60,7 @@
     <public type="string" name="invalid_dir" id="0x7f060007" />
     <public type="string" name="refresh" id="0x7f060008" />
     <public type="string" name="shortcut_name" id="0x7f060009" />
-    <public type="string" name="search_roms" id="0x7f06000a" />
+    <public type="string" name="github" id="0x7f06000a" />
     <public type="string" name="help" id="0x7f06000b" />
     <public type="string" name="load_rom_failed" id="0x7f06000c" />
     <public type="string" name="rom_not_supported" id="0x7f06000d" />
@@ -269,6 +269,6 @@
     <public type="id" name="menu_rom_gripper" id="0x7f090027" />
     <public type="id" name="menu_refresh" id="0x7f090028" />
     <public type="id" name="menu_new_profile" id="0x7f090029" />
-    <public type="id" name="menu_search_roms" id="0x7f09002a" />
+    <public type="id" name="menu_github" id="0x7f09002a" />
     <public type="id" name="menu_help" id="0x7f09002b" />
 </resources>

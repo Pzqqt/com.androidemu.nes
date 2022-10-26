@@ -42,6 +42,6 @@
     <item type="id" name="menu_rom_gripper" />
     <item type="id" name="menu_refresh" />
     <item type="id" name="menu_new_profile" />
-    <item type="id" name="menu_search_roms" />
+    <item type="id" name="menu_github" />
     <item type="id" name="menu_help" />
 </resources>

@@ -295,7 +295,7 @@
 
 .field public static final screenshot_saved:I = 0x7f060025
 
-.field public static final search_roms:I = 0x7f06000a
+.field public static final github:I = 0x7f06000a
 
 .field public static final second_controller:I = 0x7f060059
 

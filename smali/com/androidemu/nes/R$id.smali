@@ -71,7 +71,7 @@
 
 .field public static final menu_screenshot:I = 0x7f090025
 
-.field public static final menu_search_roms:I = 0x7f09002a
+.field public static final menu_github:I = 0x7f09002a
 
 .field public static final menu_settings:I = 0x7f090019
 

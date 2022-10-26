@@ -1004,47 +1004,6 @@
 
     invoke-virtual {v5, v6}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
-    .line 213
-    const-string v5, "upgrade"
-
-    invoke-virtual {p0, v5}, Lcom/androidemu/nes/EmulatorSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v5
-
-    new-instance v6, Landroid/content/Intent;
-
-    const-string v7, "android.intent.action.VIEW"
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v9, "http://market.android.com/details?id="
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {p0}, Lcom/androidemu/nes/EmulatorSettings;->getPackageName()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-static {v8}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v8
-
-    invoke-direct {v6, v7, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    invoke-virtual {v5, v6}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
-
     .line 215
     const-string v5, "github"
 

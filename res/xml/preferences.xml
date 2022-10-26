@@ -88,7 +88,6 @@
     </PreferenceScreen>
     <PreferenceScreen android:title="@string/app_about">
         <PreferenceScreen android:title="@string/about" android:key="about" />
-        <PreferenceScreen android:title="@string/upgrade" android:key="upgrade" />
         <PreferenceScreen android:title="@string/github" android:key="github" />
     </PreferenceScreen>
 </PreferenceScreen>

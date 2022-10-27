@@ -28,6 +28,12 @@ This repository is based on reverse engineering of the final version [com.androi
 
 - Can not open FDS rom, although Nesoid claims to support
 
+## How to compile
+
+- Prepare the jdk environment
+- Download [apktool_2.6.1.jar](https://github.com/iBotPeaches/Apktool/releases/download/v2.6.1/apktool_2.6.1.jar)
+- `java -jar apktool.jar b <path of this project>`
+
 ## FAQ
 
 1. Why decompile the apk instead of recompiling it from source?

@@ -28,6 +28,12 @@ Nesoid是开源的。你可以在 [这里](https://sourceforge.net/p/nesoid/code
 
 - 无法打开FDS rom，虽然Nesoid声称支持
 
+## 编译
+
+- 准备好jdk环境
+- 下载 [apktool_2.6.1.jar](https://github.com/iBotPeaches/Apktool/releases/download/v2.6.1/apktool_2.6.1.jar)
+- `java -jar apktool.jar b <本项目所在路径>`
+
 ## FAQ
 
 1. 为什么要反编译apk而不是基于源码重新编译它？

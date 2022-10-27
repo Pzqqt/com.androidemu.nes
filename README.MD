@@ -32,7 +32,7 @@ This repository is based on reverse engineering of the final version [com.androi
 
 - Prepare the jdk environment
 - Download [apktool_2.6.1.jar](https://github.com/iBotPeaches/Apktool/releases/download/v2.6.1/apktool_2.6.1.jar)
-- `java -jar apktool.jar b <path of this project>`
+- `java -jar apktool_2.6.1.jar b <path of this project>`
 
 ## FAQ
 
@@ -43,3 +43,6 @@ This repository is based on reverse engineering of the final version [com.androi
 > 2. I don't really understand how to compile apk from source
 > 3. I'm lazy:)
 
+2. Why do I experience dropped frames when playing games?
+
+> Most likely it's because your device's screen refresh rate is higher than 60. Please lock the screen refresh rate to 60 in system settings.

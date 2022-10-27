@@ -32,7 +32,7 @@ Nesoid是开源的。你可以在 [这里](https://sourceforge.net/p/nesoid/code
 
 - 准备好jdk环境
 - 下载 [apktool_2.6.1.jar](https://github.com/iBotPeaches/Apktool/releases/download/v2.6.1/apktool_2.6.1.jar)
-- `java -jar apktool.jar b <本项目所在路径>`
+- `java -jar apktool_2.6.1.jar b <本项目所在路径>`
 
 ## FAQ
 
@@ -42,3 +42,7 @@ Nesoid是开源的。你可以在 [这里](https://sourceforge.net/p/nesoid/code
 > 1. 古老的东西应该让它保持古老，同时也意味着兼容性
 > 2. 我不是很了解如何从源码编译apk
 > 3. 我很懒:)
+
+2. 为什么我在玩游戏时会感受到卡顿或丢帧？
+
+> 很有可能是因为你的设备屏幕刷新率高于60。请在系统设置中将屏幕刷新率锁定为60。

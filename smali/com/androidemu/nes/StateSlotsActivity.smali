@@ -470,14 +470,6 @@
 
     .line 96
     .local v1, "info":Landroid/widget/AdapterView$AdapterContextMenuInfo;
-    iget v2, v1, Landroid/widget/AdapterView$AdapterContextMenuInfo;->position:I
-
-    invoke-direct {p0, v2}, Lcom/androidemu/nes/StateSlotsActivity;->getSlotName(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Landroid/view/ContextMenu;->setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/ContextMenu;
-
     .line 98
     invoke-virtual {p0}, Lcom/androidemu/nes/StateSlotsActivity;->getListView()Landroid/widget/ListView;
 

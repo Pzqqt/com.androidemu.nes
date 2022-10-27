@@ -19,8 +19,6 @@
 
 .field private static final ROM_GRIPPER_PACKAGE:Ljava/lang/String; = "com.bingo.rom_gripper"
 
-.field private static final ROM_GRIPPER_URI:Landroid/net/Uri;
-
 
 # instance fields
 .field private currentDir:Ljava/io/File;
@@ -33,22 +31,6 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    .prologue
-    .line 32
-    const-string v0, "http://market.android.com/details?id=com.bingo.rom_gripper"
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/androidemu/nes/FileChooser;->ROM_GRIPPER_URI:Landroid/net/Uri;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 2
 

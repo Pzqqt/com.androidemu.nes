@@ -9,10 +9,6 @@
 # static fields
 .field private static final ABOUT_URI:Landroid/net/Uri;
 
-.field private static final GAME_GRIPPER_URI:Ljava/lang/String; = "https://sites.google.com/site/gamegripper"
-
-.field private static final MARKET_URI:Ljava/lang/String; = "http://market.android.com/details?id="
-
 .field private static final REQUEST_FDS_ROM:I = 0x65
 
 .field private static final REQUEST_GG_ROM:I = 0x64
@@ -20,8 +16,6 @@
 .field private static final REQUEST_LOAD_KEY_PROFILE:I = 0x1
 
 .field private static final REQUEST_SAVE_KEY_PROFILE:I = 0x2
-
-.field private static final SEARCH_ROM_URI:Ljava/lang/String; = "http://www.romfind.com/nes-roms.html?sid=YONG"
 
 .field public static final gameKeys:[I
 

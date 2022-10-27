@@ -1974,7 +1974,7 @@
     .line 1212
     new-instance v1, Ljava/io/File;
 
-    const-string v6, "/sdcard/screenshot"
+    const-string v6, "/sdcard/Pictures/Screenshots"
 
     invoke-direct {v1, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 

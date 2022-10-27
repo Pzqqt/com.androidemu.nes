@@ -560,9 +560,10 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x3 -> :sswitch_0
-        0x1a -> :sswitch_0
-        0x52 -> :sswitch_0
+        0x3 -> :sswitch_0    # 3, KEYCODE_HOME
+        0x4 -> :sswitch_0    # 4, KEYCODE_BACK
+        0x1a -> :sswitch_0    # 26, KEYCODE_POWER
+        0x52 -> :sswitch_0    # 82, KEYCODE_MENU
     .end sparse-switch
 .end method
 

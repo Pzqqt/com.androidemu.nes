@@ -15,10 +15,6 @@
 
 .field private static final LOG_TAG:Ljava/lang/String; = "FileChooser"
 
-.field private static final ROM_GRIPPER_ACTION:Ljava/lang/String; = "com.bingo.rom_gripper.action.ROM_LIST"
-
-.field private static final ROM_GRIPPER_PACKAGE:Ljava/lang/String; = "com.bingo.rom_gripper"
-
 
 # instance fields
 .field private currentDir:Ljava/io/File;

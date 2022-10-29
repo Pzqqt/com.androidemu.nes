@@ -2046,7 +2046,7 @@
     .restart local v9    # "sx":F
     .restart local v10    # "sy":F
     :cond_3
-    const-string v13, "layoutMargin"
+    const-string v13, "layoutMarginX"
 
     const/4 v14, 0x2
 
@@ -2056,8 +2056,18 @@
 
     mul-int/lit8 v4, v13, 0xa
 
-    .line 117
-    .local v4, "margin":I
+    .local v4, "margin_x":I
+    const-string v13, "layoutMarginY"
+
+    const/4 v14, 0x2
+
+    invoke-interface {v7, v13, v14}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v13
+
+    mul-int/lit8 v9, v13, 0xa
+
+    .local v9, "margin_y":I
     int-to-float v13, v4
 
     move-object/from16 v0, p0
@@ -2072,7 +2082,7 @@
     .local v5, "marginX":I
     iput v5, v0, Lcom/androidemu/nes/input/VirtualKeypad;->marginX:I
 
-    int-to-float v13, v4
+    int-to-float v13, v9
 
     move-object/from16 v0, p0
 

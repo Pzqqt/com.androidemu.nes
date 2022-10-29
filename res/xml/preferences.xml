@@ -54,7 +54,8 @@
                 </PreferenceScreen>
             </PreferenceCategory>
             <ListPreference android:entries="@array/vkeypad_layout_entries" android:title="@string/vkeypad_layout" android:key="vkeypadLayout" android:defaultValue="bottom_bottom" android:entryValues="@array/vkeypad_layout_entryvalues" />
-            <com.androidemu.nes.SeekBarPreference android:title="@string/layout_margin" android:key="layoutMargin" android:defaultValue="2" androidemu:maxValue="10" />
+            <com.androidemu.nes.SeekBarPreference android:title="@string/layout_margin_x" android:key="layoutMarginX" android:defaultValue="2" androidemu:maxValue="20" />
+            <com.androidemu.nes.SeekBarPreference android:title="@string/layout_margin_y" android:key="layoutMarginY" android:defaultValue="2" androidemu:maxValue="20" />
         </PreferenceScreen>
         <CheckBoxPreference android:title="@string/enable_trackball" android:key="enableTrackball" android:defaultValue="true" />
         <com.androidemu.nes.SeekBarPreference android:title="@string/trackball_sensitivity" android:key="trackballSensitivity" android:dependency="enableTrackball" android:defaultValue="2" androidemu:maxValue="5" />

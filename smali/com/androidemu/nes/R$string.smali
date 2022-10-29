@@ -187,7 +187,9 @@
 
 .field public static final launcher_shortcut_name:I = 0x7f060002
 
-.field public static final layout_margin:I = 0x7f060079
+.field public static final layout_margin_x:I = 0x7f060079
+
+.field public static final layout_margin_y:I = 0x7f0600ab
 
 .field public static final load_profile:I = 0x7f060039
 

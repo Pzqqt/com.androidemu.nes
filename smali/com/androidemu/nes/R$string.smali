@@ -155,6 +155,10 @@
 
 .field public static final hide_extra_buttons:I = 0x7f060075
 
+.field public static final hide_navigation_bar:I = 0x7f0600ac
+
+.field public static final hide_navigation_bar_summary:I = 0x7f0600ad
+
 .field public static final hide_select_start:I = 0x7f060077
 
 .field public static final in_between_press:I = 0x7f06006a

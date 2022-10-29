@@ -9,6 +9,7 @@
         <PreferenceCategory android:title="@string/video_settings">
             <ListPreference android:entries="@array/orientation_entries" android:title="@string/orientation" android:key="orientation" android:summary="@string/orientation_summary" android:defaultValue="unspecified" android:entryValues="@array/orientation_entryvalues" />
             <CheckBoxPreference android:title="@string/full_screen_mode" android:key="fullScreenMode" android:summary="@string/full_screen_mode_summary" android:defaultValue="true" />
+            <CheckBoxPreference android:title="@string/hide_navigation_bar" android:key="hideNavigationBar" android:summary="@string/hide_navigation_bar_summary" android:dependency="fullScreenMode" android:defaultValue="false" />
             <ListPreference android:entries="@array/scaling_mode_entries" android:title="@string/scaling_mode" android:key="scalingMode" android:defaultValue="proportional" android:entryValues="@array/scaling_mode_entryvalues" />
             <ListPreference android:entries="@array/aspect_ratio_entries" android:title="@string/aspect_ratio" android:key="aspectRatio" android:defaultValue="1.3333" android:entryValues="@array/aspect_ratio_entryvalues" />
             <CheckBoxPreference android:title="@string/accurate_rendering" android:key="accurateRendering" android:summary="@string/accurate_rendering_summary" />

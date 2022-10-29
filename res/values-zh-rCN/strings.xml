@@ -154,6 +154,8 @@ IP: %1$s
     <string name="flip_screen_summary">如果十字键位于屏幕右边，而你想将其置于左边时，请勾选此选项</string>
     <string name="full_screen_mode">全屏模式​​​​​​​​​​​</string>
     <string name="full_screen_mode_summary">隐藏系统通知栏​​​​​​​​​​​​​​​​​​​​​</string>
+    <string name="hide_navigation_bar">隐藏导航栏</string>
+    <string name="hide_navigation_bar_summary">在Android 4.4+系统上同时隐藏导航栏</string>
     <string name="orientation">屏幕方向</string>
     <string name="orientation_summary">设定游戏运行界面显示方向</string>
     <string name="quick_load_on_start">启动时自动载入</string>

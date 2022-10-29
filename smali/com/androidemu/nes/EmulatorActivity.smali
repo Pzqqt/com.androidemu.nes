@@ -2948,7 +2948,7 @@
 
     aput-object v7, v4, v6
 
-    const-string v6, "_flipScreen"    # Deprecated
+    const-string v6, "hideNavigationBar"
 
     aput-object v6, v4, v8
 
@@ -3971,11 +3971,15 @@
 .end method
 
 .method private setFullScreenMode(Landroid/content/SharedPreferences;)V
-    .locals 3
+    .locals 4
     .param p1, "prefs"    # Landroid/content/SharedPreferences;
 
     .prologue
-    const/4 v2, 0x1
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x13    # 19, Android 4.4, KITKAT
+
+    if-ge v1, v2, :goto_2
 
     invoke-virtual {p0}, Lcom/androidemu/nes/EmulatorActivity;->getWindow()Landroid/view/Window;
 
@@ -3987,6 +3991,8 @@
 
     .local v0, "attrs":Landroid/view/WindowManager$LayoutParams;
     const-string v1, "fullScreenMode"
+
+    const/4 v2, 0x1
 
     invoke-interface {p1, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -4017,6 +4023,58 @@
 
     invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
+    goto :goto_ff
+
+    :goto_2    # Build.VERSION.SDK_INT >= 19
+
+    invoke-virtual {p0}, Lcom/androidemu/nes/EmulatorActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    .local v0, "decorView":Landroid/view/View;
+
+    const/16 v3, 0x00000100    # View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+
+    .local v3, "systemUiFlags":I
+
+    const-string v1, "fullScreenMode"
+
+    const/4 v2, 0x1
+
+    invoke-interface {p1, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    if-eqz v1, :goto_fe
+
+    # or-int/lit16 v3, v3, 0x00000400    # View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+    # or-int/lit16 v3, v3, 0x00000004    # View.SYSTEM_UI_FLAG_FULLSCREEN
+    # or-int/lit16 v3, v3, 0x00001000    # View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+    or-int/lit16 v3, v3, 0x1404    # View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+
+    const-string v1, "hideNavigationBar"
+
+    const/4 v2, 0x0
+
+    invoke-interface {p1, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    if-eqz v1, :goto_fe
+
+    # or-int/lit16 v3, v3, 0x00000200    # View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+    # or-int/lit16 v3, v3, 0x00000002    # View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+    or-int/lit16 v3, v3, 0x202    # View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+
+    :goto_fe
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setSystemUiVisibility(I)V
+
+    :goto_ff
     return-void
 .end method
 
@@ -4063,9 +4121,20 @@
 
     move-result v7
 
+    if-eqz v7, :cond_30
+
+    goto :cond_31
+
+    :cond_30
+    const-string v7, "hideNavigationBar"
+
+    invoke-virtual {v7, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
     if-eqz v7, :cond_3
 
-    .line 465
+    :cond_31
     invoke-direct {p0, p1}, Lcom/androidemu/nes/EmulatorActivity;->setFullScreenMode(Landroid/content/SharedPreferences;)V
 
     goto :goto_0

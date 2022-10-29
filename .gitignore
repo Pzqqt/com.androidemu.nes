@@ -1,0 +1,8 @@
+# Intermediate files generated when apktool compiles apk
+build/
+
+# Generated apk file
+dist/
+
+# Undecoded original files generated when apktool decompiles an apk
+original/

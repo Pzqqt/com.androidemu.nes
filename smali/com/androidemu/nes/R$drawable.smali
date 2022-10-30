@@ -17,8 +17,6 @@
 # static fields
 .field public static final app_icon:I = 0x7f020000
 
-.field public static final game_gripper:I = 0x7f020001
-
 .field public static final ic_menu_change_disk:I = 0x7f020002
 
 .field public static final ic_menu_disconnect:I = 0x7f020003

@@ -7,8 +7,6 @@
 
 
 # static fields
-.field private static final GAME_GRIPPER_URI:Ljava/lang/String; = "http://www.game-gripper.com"
-
 .field private static final LEGAL_URI:Landroid/net/Uri;
 
 .field private static final LICENSE_URI:Landroid/net/Uri;
@@ -1050,29 +1048,6 @@
     invoke-direct {v7, v8, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 218
-    invoke-virtual {v6, v7}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
-
-    .line 221
-    const-string v6, "gameGripper"
-
-    invoke-virtual {p0, v6}, Lcom/androidemu/nes/EmulatorSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v6
-
-    new-instance v7, Landroid/content/Intent;
-
-    .line 222
-    const-string v8, "android.intent.action.VIEW"
-
-    const-string v9, "http://www.game-gripper.com"
-
-    invoke-static {v9}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v9
-
-    invoke-direct {v7, v8, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    .line 221
     invoke-virtual {v6, v7}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
     .line 223

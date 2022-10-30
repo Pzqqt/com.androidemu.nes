@@ -25,8 +25,6 @@
 
 .field public static final file_chooser:I = 0x7f030004
 
-.field public static final game_gripper:I = 0x7f030005
-
 .field public static final new_cheat:I = 0x7f030006
 
 .field public static final new_profile:I = 0x7f030007

@@ -21,7 +21,6 @@
     <PreferenceScreen android:title="@string/input_settings">
         <ListPreference android:entries="@array/second_controller_entries" android:title="@string/second_controller" android:key="secondController" android:summary="@string/second_controller_summary" android:defaultValue="none" android:entryValues="@array/second_controller_entryvalues" />
         <PreferenceScreen android:title="@string/key_mappings" android:key="keyMappings" android:summary="@string/key_mappings_summary">
-            <Preference android:layout="@layout/game_gripper" android:key="gameGripper" />
             <PreferenceCategory android:title="@string/key_profiles">
                 <PreferenceScreen android:title="@string/load_profile" android:key="loadKeyProfile" />
                 <PreferenceScreen android:title="@string/save_profile" android:key="saveKeyProfile" />

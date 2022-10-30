@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <public type="drawable" name="app_icon" id="0x7f020000" />
-    <public type="drawable" name="game_gripper" id="0x7f020001" />
     <public type="drawable" name="ic_menu_change_disk" id="0x7f020002" />
     <public type="drawable" name="ic_menu_disconnect" id="0x7f020003" />
     <public type="drawable" name="ic_menu_fast_forward" id="0x7f020004" />
@@ -15,7 +14,6 @@
     <public type="layout" name="device_name" id="0x7f030002" />
     <public type="layout" name="emulator" id="0x7f030003" />
     <public type="layout" name="file_chooser" id="0x7f030004" />
-    <public type="layout" name="game_gripper" id="0x7f030005" />
     <public type="layout" name="new_cheat" id="0x7f030006" />
     <public type="layout" name="new_profile" id="0x7f030007" />
     <public type="layout" name="seekbar_dialog" id="0x7f030008" />

@@ -187,8 +187,6 @@
     <public type="string" name="game_genie_rom" id="0x7f07008a" />
     <public type="string" name="fds_rom" id="0x7f07008b" />
     <public type="string" name="user_settings" id="0x7f07008c" />
-    <public type="string" name="flip_screen" id="0x7f07008d" />
-    <public type="string" name="flip_screen_summary" id="0x7f07008e" />
     <public type="string" name="full_screen_mode" id="0x7f07008f" />
     <public type="string" name="full_screen_mode_summary" id="0x7f070090" />
     <public type="string" name="orientation" id="0x7f070091" />

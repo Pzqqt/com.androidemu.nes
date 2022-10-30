@@ -850,11 +850,10 @@
     goto :goto_2
 .end method
 
-.method private getEventX(Landroid/view/MotionEvent;IZ)F
+.method private getEventX(Landroid/view/MotionEvent;I)F
     .locals 2
     .param p1, "event"    # Landroid/view/MotionEvent;
     .param p2, "index"    # I
-    .param p3, "flip"    # Z
 
     .prologue
     .line 346
@@ -864,21 +863,6 @@
 
     .line 347
     .local v0, "x":F
-    if-eqz p3, :cond_0
-
-    .line 348
-    iget-object v1, p0, Lcom/androidemu/nes/input/VirtualKeypad;->view:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    sub-float v0, v1, v0
-
-    .line 349
-    :cond_0
     iget v1, p0, Lcom/androidemu/nes/input/VirtualKeypad;->scaleX:F
 
     mul-float/2addr v1, v0
@@ -886,11 +870,10 @@
     return v1
 .end method
 
-.method private getEventY(Landroid/view/MotionEvent;IZ)F
+.method private getEventY(Landroid/view/MotionEvent;I)F
     .locals 2
     .param p1, "event"    # Landroid/view/MotionEvent;
     .param p2, "index"    # I
-    .param p3, "flip"    # Z
 
     .prologue
     .line 353
@@ -900,21 +883,6 @@
 
     .line 354
     .local v0, "y":F
-    if-eqz p3, :cond_0
-
-    .line 355
-    iget-object v1, p0, Lcom/androidemu/nes/input/VirtualKeypad;->view:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    sub-float v0, v1, v0
-
-    .line 356
-    :cond_0
     iget v1, p0, Lcom/androidemu/nes/input/VirtualKeypad;->scaleY:F
 
     mul-float/2addr v1, v0
@@ -2021,10 +1989,9 @@
     return v0
 .end method
 
-.method public onTouch(Landroid/view/MotionEvent;Z)Z
+.method public onTouch(Landroid/view/MotionEvent;)Z
     .locals 11
     .param p1, "event"    # Landroid/view/MotionEvent;
-    .param p2, "flip"    # Z
 
     .prologue
     const/4 v9, 0x0
@@ -2159,12 +2126,12 @@
     iget-object v7, p0, Lcom/androidemu/nes/input/VirtualKeypad;->touchedControls:[Lcom/androidemu/nes/input/VirtualKeypad$Control;
 
     .line 428
-    invoke-direct {p0, p1, v4, p2}, Lcom/androidemu/nes/input/VirtualKeypad;->getEventX(Landroid/view/MotionEvent;IZ)F
+    invoke-direct {p0, p1, v4}, Lcom/androidemu/nes/input/VirtualKeypad;->getEventX(Landroid/view/MotionEvent;I)F
 
     move-result v8
 
     .line 429
-    invoke-direct {p0, p1, v4, p2}, Lcom/androidemu/nes/input/VirtualKeypad;->getEventY(Landroid/view/MotionEvent;IZ)F
+    invoke-direct {p0, p1, v4}, Lcom/androidemu/nes/input/VirtualKeypad;->getEventY(Landroid/view/MotionEvent;I)F
 
     move-result v9
 
@@ -2209,12 +2176,12 @@
     aget-object v7, v7, v3
 
     .line 448
-    invoke-direct {p0, p1, v2, p2}, Lcom/androidemu/nes/input/VirtualKeypad;->getEventX(Landroid/view/MotionEvent;IZ)F
+    invoke-direct {p0, p1, v2}, Lcom/androidemu/nes/input/VirtualKeypad;->getEventX(Landroid/view/MotionEvent;I)F
 
     move-result v8
 
     .line 449
-    invoke-direct {p0, p1, v2, p2}, Lcom/androidemu/nes/input/VirtualKeypad;->getEventY(Landroid/view/MotionEvent;IZ)F
+    invoke-direct {p0, p1, v2}, Lcom/androidemu/nes/input/VirtualKeypad;->getEventY(Landroid/view/MotionEvent;I)F
 
     move-result v9
 

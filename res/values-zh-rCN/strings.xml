@@ -151,8 +151,6 @@ IP: %1$s
     <string name="game_genie_rom">Game Genie</string>
     <string name="fds_rom">FDS Bios rom</string>
     <string name="user_settings">用户设置​​​​​​​​​</string>
-    <string name="flip_screen">屏幕倒置</string>
-    <string name="flip_screen_summary">如果十字键位于屏幕右边，而你想将其置于左边时，请勾选此选项</string>
     <string name="full_screen_mode">全屏模式​​​​​​​​​​​</string>
     <string name="full_screen_mode_summary">隐藏系统通知栏​​​​​​​​​​​​​​​​​​​​​</string>
     <string name="orientation">屏幕方向</string>

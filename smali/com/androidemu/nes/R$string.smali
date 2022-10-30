@@ -101,10 +101,6 @@
 
 .field public static final fds_rom:I = 0x7f07008b
 
-.field public static final flip_screen:I = 0x7f07008d
-
-.field public static final flip_screen_summary:I = 0x7f07008e
-
 .field public static final frame_skip_mode:I = 0x7f070052
 
 .field public static final frame_skip_settings:I = 0x7f070051

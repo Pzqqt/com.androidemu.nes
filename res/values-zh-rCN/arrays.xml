@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="exit_game_options">
-        <item>继续游戏</item>
-        <item>保存退出</item>
-        <item>关闭游戏</item>
-    </string-array>
     <string-array name="scaling_mode_entries">
         <item>拉伸画面</item>
         <item>缩放画面</item>

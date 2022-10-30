@@ -66,9 +66,15 @@
         <item>60</item>
     </string-array>
     <string-array name="exit_game_options">
-        <item>Back to game</item>
-        <item>Save and close</item>
-        <item>Close</item>
+        <item>@string/load_state</item>
+        <item>@string/save_state</item>
+        <item>@string/settings</item>
+        <item>@string/fast_forward</item>
+        <item>@string/cheats</item>
+        <item>@string/reset</item>
+        <item>@string/power</item>
+        <item>@string/screenshot</item>
+        <item>@string/close</item>
     </string-array>
     <string-array name="scaling_mode_entries">
         <item>Stretched</item>

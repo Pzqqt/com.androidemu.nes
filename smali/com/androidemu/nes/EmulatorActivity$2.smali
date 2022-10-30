@@ -38,38 +38,90 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
+    .locals 3
     .param p1, "dialog"    # Landroid/content/DialogInterface;
     .param p2, "which"    # I
 
     .prologue
-    .line 817
+
+    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$2;->this$0:Lcom/androidemu/nes/EmulatorActivity;
+
     packed-switch p2, :pswitch_data_0
 
-    .line 825
     :goto_0
     return-void
 
-    .line 819
     :pswitch_0
-    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$2;->this$0:Lcom/androidemu/nes/EmulatorActivity;
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$200(Lcom/androidemu/nes/EmulatorActivity;)V
 
-    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$13(Lcom/androidemu/nes/EmulatorActivity;)V
+    goto :goto_0
 
-    .line 822
     :pswitch_1
-    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$2;->this$0:Lcom/androidemu/nes/EmulatorActivity;
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$201(Lcom/androidemu/nes/EmulatorActivity;)V
 
+    goto :goto_0
+
+    :pswitch_3
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$203(Lcom/androidemu/nes/EmulatorActivity;)V
+
+    goto :goto_0
+
+    :pswitch_5
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$205(Lcom/androidemu/nes/EmulatorActivity;)V
+
+    goto :goto_0
+
+    :pswitch_6
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$206(Lcom/androidemu/nes/EmulatorActivity;)V
+
+    goto :goto_0
+
+    :pswitch_7
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$207(Lcom/androidemu/nes/EmulatorActivity;)V
+
+    goto :goto_0
+
+    :pswitch_8
     invoke-virtual {v0}, Lcom/androidemu/nes/EmulatorActivity;->finish()V
 
     goto :goto_0
 
-    .line 817
+    :pswitch_2
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-class v2, Lcom/androidemu/nes/EmulatorSettings;
+
+    invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v0, v1}, Lcom/androidemu/nes/EmulatorActivity;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    :pswitch_4
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-class v2, Lcom/androidemu/nes/CheatsActivity;
+
+    invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v0, v1}, Lcom/androidemu/nes/EmulatorActivity;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_0
+
     nop
 
     :pswitch_data_0
-    .packed-switch 0x1
+    .packed-switch 0x0
         :pswitch_0
         :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+        :pswitch_6
+        :pswitch_7
+        :pswitch_8
     .end packed-switch
 .end method

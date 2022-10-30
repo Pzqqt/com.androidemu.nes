@@ -2355,7 +2355,6 @@
     move-result v11
 
     .line 111
-    .local v11, "threshold":I
     int-to-float v14, v11
 
     const/high16 v15, 0x41200000    # 10.0f
@@ -2373,7 +2372,6 @@
     iput v0, v1, Lcom/androidemu/nes/input/VirtualKeypad;->pointSizeThreshold:F
 
     .line 114
-    .end local v11    # "threshold":I
     :cond_1
     move-object/from16 v0, p0
 
@@ -2580,7 +2578,7 @@
 
     .line 127
     .local v10, "sy":F
-    const-string v14, "layoutMargin"
+    const-string v14, "layoutMarginX"
 
     const/4 v15, 0x2
 
@@ -2590,8 +2588,18 @@
 
     mul-int/lit8 v6, v14, 0x8
 
-    .line 128
-    .local v6, "margin":I
+    .local v6, "margin_x":I
+    const-string v14, "layoutMarginY"
+
+    const/4 v15, 0x2
+
+    invoke-interface {v7, v14, v15}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v14
+
+    mul-int/lit8 v11, v14, 0x8
+
+    .local v11, "margin_y":I
     int-to-float v14, v6
 
     mul-float/2addr v14, v9
@@ -2605,8 +2613,9 @@
     iput v0, v1, Lcom/androidemu/nes/input/VirtualKeypad;->marginX:I
 
     .line 129
-    int-to-float v14, v6
+    int-to-float v14, v11
 
+    .end local v11
     mul-float/2addr v14, v10
 
     float-to-int v14, v14
@@ -2719,7 +2728,7 @@
     .line 103
     .end local v4    # "controlScale":F
     .end local v5    # "h":I
-    .end local v6    # "margin":I
+    .end local v6    # "margin_x":I
     .end local v8    # "res":Landroid/content/res/Resources;
     .end local v9    # "sx":F
     .end local v10    # "sy":F
@@ -2738,7 +2747,7 @@
     .line 135
     .restart local v4    # "controlScale":F
     .restart local v5    # "h":I
-    .restart local v6    # "margin":I
+    .restart local v6    # "margin_x":I
     .restart local v8    # "res":Landroid/content/res/Resources;
     .restart local v9    # "sx":F
     .restart local v10    # "sy":F

@@ -134,7 +134,8 @@ IP: %1$s
     <string name="disable_extra_buttons">禁用连发 A/B 键</string>
     <string name="hide_select_start">隐藏 Select/Start 键</string>
     <string name="vkeypad_layout">十字键与A、B键布局</string>
-    <string name="layout_margin">布局边距</string>
+    <string name="layout_margin_x">水平布局边距</string>
+    <string name="layout_margin_y">垂直布局边距</string>
     <string name="enable_trackball">设置轨迹球为方向键​​​​​​​​​</string>
     <string name="trackball_sensitivity">轨迹球灵敏度​​​​​​​​​​​​​​​</string>
     <string name="enable_sensor">重力感应控制左右方向键</string>

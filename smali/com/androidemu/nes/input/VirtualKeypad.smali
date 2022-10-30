@@ -1765,21 +1765,6 @@
     .param p2, "prefs"    # Landroid/content/SharedPreferences;
 
     .prologue
-    .line 249
-    iget-object v1, p0, Lcom/androidemu/nes/input/VirtualKeypad;->view:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/androidemu/nes/input/VirtualKeypad;->view:Landroid/view/View;
-
-    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
-
-    move-result v2
-
-    if-le v1, v2, :cond_0
-
     .line 250
     iget v1, p1, Landroid/graphics/Rect;->left:I
 
@@ -1798,8 +1783,25 @@
 
     iput v1, p1, Landroid/graphics/Rect;->right:I
 
+    .line 253
+    iget v1, p1, Landroid/graphics/Rect;->top:I
+
+    iget v2, p0, Lcom/androidemu/nes/input/VirtualKeypad;->marginY:I
+
+    add-int/2addr v1, v2
+
+    iput v1, p1, Landroid/graphics/Rect;->top:I
+
+    .line 254
+    iget v1, p1, Landroid/graphics/Rect;->bottom:I
+
+    iget v2, p0, Lcom/androidemu/nes/input/VirtualKeypad;->marginY:I
+
+    sub-int/2addr v1, v2
+
+    iput v1, p1, Landroid/graphics/Rect;->bottom:I
+
     .line 257
-    :goto_0
     const-string v1, "vkeypadLayout"
 
     .line 258
@@ -1830,28 +1832,6 @@
     .line 267
     :goto_1
     return-void
-
-    .line 253
-    .end local v0    # "layout":Ljava/lang/String;
-    :cond_0
-    iget v1, p1, Landroid/graphics/Rect;->top:I
-
-    iget v2, p0, Lcom/androidemu/nes/input/VirtualKeypad;->marginY:I
-
-    add-int/2addr v1, v2
-
-    iput v1, p1, Landroid/graphics/Rect;->top:I
-
-    .line 254
-    iget v1, p1, Landroid/graphics/Rect;->bottom:I
-
-    iget v2, p0, Lcom/androidemu/nes/input/VirtualKeypad;->marginY:I
-
-    sub-int/2addr v1, v2
-
-    iput v1, p1, Landroid/graphics/Rect;->bottom:I
-
-    goto :goto_0
 
     .line 261
     .restart local v0    # "layout":Ljava/lang/String;

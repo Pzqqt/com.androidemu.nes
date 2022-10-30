@@ -66,8 +66,8 @@
 
     goto :goto_0
 
-    :pswitch_5
-    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$205(Lcom/androidemu/nes/EmulatorActivity;)V
+    :pswitch_4
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$204(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
@@ -82,6 +82,11 @@
     goto :goto_0
 
     :pswitch_8
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$208(Lcom/androidemu/nes/EmulatorActivity;)V
+
+    goto :goto_0
+
+    :pswitch_9
     invoke-virtual {v0}, Lcom/androidemu/nes/EmulatorActivity;->finish()V
 
     goto :goto_0
@@ -98,7 +103,7 @@
 
     goto :goto_0
 
-    :pswitch_4
+    :pswitch_5
 
     new-instance v1, Landroid/content/Intent;
 
@@ -123,5 +128,6 @@
         :pswitch_6
         :pswitch_7
         :pswitch_8
+        :pswitch_9
     .end packed-switch
 .end method

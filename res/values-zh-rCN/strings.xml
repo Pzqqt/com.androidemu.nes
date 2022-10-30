@@ -29,6 +29,7 @@
     <string name="reset">重新开始</string>
     <string name="power">电源开关</string>
     <string name="change_disk">切换磁碟</string>
+    <string name="change_disk_warning">此 ROM 不支持切换磁碟。</string>
     <string name="disk_side">磁碟 %1$d %2$c 面</string>
     <string name="netplay_connect">联网对战</string>
     <string name="netplay_disconnect">断开连接</string>

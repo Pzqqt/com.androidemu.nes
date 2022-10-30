@@ -378,6 +378,35 @@
 .end method
 
 .method static synthetic access$203(Lcom/androidemu/nes/EmulatorActivity;)V
+    .locals 2
+    .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
+
+    iget v0, p0, Lcom/androidemu/nes/EmulatorActivity;->fdsTotalSides:I
+
+    const/4 v1, 0x1
+
+    if-gt v0, v1, :cond_0
+
+    const v0, 0x7f0700b2
+
+    const v1, 0x0
+
+    invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    goto :cond_ff
+
+    :cond_0
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->onChangeDisk()V
+
+    :cond_ff
+    return-void
+.end method
+
+.method static synthetic access$204(Lcom/androidemu/nes/EmulatorActivity;)V
     .locals 0
     .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
 
@@ -386,7 +415,7 @@
     return-void
 .end method
 
-.method static synthetic access$205(Lcom/androidemu/nes/EmulatorActivity;)V
+.method static synthetic access$206(Lcom/androidemu/nes/EmulatorActivity;)V
     .locals 0
     .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
 
@@ -395,7 +424,7 @@
     return-void
 .end method
 
-.method static synthetic access$206(Lcom/androidemu/nes/EmulatorActivity;)V
+.method static synthetic access$207(Lcom/androidemu/nes/EmulatorActivity;)V
     .locals 0
     .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
 
@@ -404,7 +433,7 @@
     return-void
 .end method
 
-.method static synthetic access$207(Lcom/androidemu/nes/EmulatorActivity;)V
+.method static synthetic access$208(Lcom/androidemu/nes/EmulatorActivity;)V
     .locals 0
     .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
 

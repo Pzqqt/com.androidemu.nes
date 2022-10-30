@@ -29,6 +29,7 @@
     <string name="reset">Reset</string>
     <string name="power">Power</string>
     <string name="change_disk">Change disk</string>
+    <string name="change_disk_warning">This ROM does not support switching disk.</string>
     <string name="disk_side">Disk %1$d Side %2$c</string>
     <string name="netplay_connect">Net-play</string>
     <string name="netplay_disconnect">Disconnect</string>

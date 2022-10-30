@@ -49,6 +49,8 @@
 
 .field public static final change_disk:I = 0x7f07001b
 
+.field public static final change_disk_warning:I = 0x7f0700b2
+
 .field public static final cheat_code:I = 0x7f070046
 
 .field public static final cheat_name:I = 0x7f070047

@@ -40,6 +40,7 @@
     <item type="id" name="menu_close" />
     <item type="id" name="menu_refresh" />
     <item type="id" name="menu_new_profile" />
+    <item type="id" name="menu_github" />
     <item type="id" name="menu_help" />
     <item type="id" name="delete_rom" />
     <item type="id" name="clear_saves" />

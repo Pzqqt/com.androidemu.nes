@@ -13,6 +13,7 @@
     <string name="clear_cheats">Clear cheats</string>
     <string name="refresh">Refresh</string>
     <string name="shortcut_name">Shortcut Name</string>
+    <string name="github">Github</string>
     <string name="help">Help</string>
     <string name="load_rom_failed">Load ROM failed. Please try another file.</string>
     <string name="rom_not_supported">ROM file type is not supported.</string>

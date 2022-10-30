@@ -89,5 +89,6 @@
     <PreferenceScreen android:title="@string/app_about">
         <PreferenceScreen android:title="@string/license" android:key="license" />
         <PreferenceScreen android:title="@string/legal" android:key="legal" />
+        <PreferenceScreen android:title="@string/github" android:key="github" />
     </PreferenceScreen>
 </PreferenceScreen>

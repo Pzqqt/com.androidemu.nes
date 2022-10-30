@@ -145,6 +145,8 @@
 
 .field public static final gamepad_up_right:I = 0x7f0700a4
 
+.field public static final github:I = 0x7f0700ae
+
 .field public static final help:I = 0x7f07000d
 
 .field public static final hide_buttons:I = 0x7f070076

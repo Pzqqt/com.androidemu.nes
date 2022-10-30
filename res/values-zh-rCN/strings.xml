@@ -13,6 +13,7 @@
     <string name="clear_cheats">清除作弊码</string>
     <string name="refresh">刷新</string>
     <string name="shortcut_name">快捷名称</string>
+    <string name="github">Github</string>
     <string name="help">帮助</string>
     <string name="load_rom_failed">游戏载入失败，请选择其他游戏文件</string>
     <string name="rom_not_supported">不支持此类别游戏文件</string>

@@ -516,6 +516,32 @@
     goto :goto_0
 .end method
 
+.method public static getGithubIntent()Landroid/content/Intent;
+    .locals 3
+
+    .prologue
+    .line 121
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.intent.action.VIEW"
+
+    const-string v2, "https://github.com/Pzqqt/com.androidemu.nes_61"
+
+    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    const/high16 v1, 0x10000000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method private setKeyMappings(Ljava/util/Map;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
@@ -1008,6 +1034,18 @@
 
     .line 216
     invoke-virtual {v6, v7}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
+
+    const-string v6, "github"
+
+    invoke-virtual {p0, v6}, Lcom/androidemu/nes/EmulatorSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v7
+
+    invoke-static {}, Lcom/androidemu/nes/EmulatorSettings;->getGithubIntent()Landroid/content/Intent;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
     .line 223
     return-void

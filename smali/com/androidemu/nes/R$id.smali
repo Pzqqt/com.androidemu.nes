@@ -53,6 +53,8 @@
 
 .field public static final menu_fast_forward:I = 0x7f09001a
 
+.field public static final menu_github:I = 0x7f09002c
+
 .field public static final menu_help:I = 0x7f090028
 
 .field public static final menu_load_state:I = 0x7f090016

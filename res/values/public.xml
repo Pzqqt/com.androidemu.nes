@@ -218,6 +218,7 @@
     <public type="string" name="gamepad_A_turbo" id="0x7f0700ab" />
     <public type="string" name="gamepad_B_turbo" id="0x7f0700ac" />
     <public type="string" name="gamepad_AB" id="0x7f0700ad" />
+    <public type="string" name="github" id="0x7f0700ae" />
     <public type="menu" name="cheats" id="0x7f080000" />
     <public type="menu" name="emulator" id="0x7f080001" />
     <public type="menu" name="file_chooser" id="0x7f080002" />
@@ -268,4 +269,5 @@
     <public type="id" name="delete_rom" id="0x7f090029" />
     <public type="id" name="clear_saves" id="0x7f09002a" />
     <public type="id" name="clear_cheats" id="0x7f09002b" />
+    <public type="id" name="menu_github" id="0x7f09002c" />
 </resources>

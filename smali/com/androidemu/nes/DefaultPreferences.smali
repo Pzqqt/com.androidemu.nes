@@ -93,16 +93,6 @@
     .line 26
     new-array v1, v7, [I
 
-    .line 30
-    const/16 v2, 0x54
-
-    aput v2, v1, v5
-
-    .line 31
-    const/4 v2, 0x4
-
-    aput v2, v1, v6
-
     .line 26
     sput-object v1, Lcom/androidemu/nes/DefaultPreferences;->keymaps_non_qwerty:[I
 

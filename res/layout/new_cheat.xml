@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/cheat_name" />
+        <EditText android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/cheat_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:scrollHorizontally="true" android:capitalize="words" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/cheat_code" />
+        <EditText android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/cheat_code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:capitalize="none" android:autoText="false" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,24 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.androidemu.nes-62-2.5.0.apk
+compressionType: false
+doNotCompress:
+- resources.arsc
+- png
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '3'
+  targetSdkVersion: '9'
+sharedLibrary: false
+sparseResources: true
+unknownFiles: {}
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.6.1
+versionInfo:
+  versionCode: '62'
+  versionName: 2.5.0

@@ -87,7 +87,6 @@
         </PreferenceCategory>
     </PreferenceScreen>
     <PreferenceScreen android:title="@string/app_about">
-        <PreferenceScreen android:title="@string/upgrade" android:key="upgrade" />
         <PreferenceScreen android:title="@string/license" android:key="license" />
         <PreferenceScreen android:title="@string/legal" android:key="legal" />
     </PreferenceScreen>

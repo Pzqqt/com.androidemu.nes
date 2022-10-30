@@ -11,8 +11,6 @@
 
 .field private static final LICENSE_URI:Landroid/net/Uri;
 
-.field private static final MARKET_URI:Ljava/lang/String; = "http://market.android.com/details?id="
-
 .field private static final REQUEST_FDS_ROM:I = 0x65
 
 .field private static final REQUEST_GG_ROM:I = 0x64
@@ -1009,45 +1007,6 @@
     move-result-object v7
 
     .line 216
-    invoke-virtual {v6, v7}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
-
-    .line 218
-    const-string v6, "upgrade"
-
-    invoke-virtual {p0, v6}, Lcom/androidemu/nes/EmulatorSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v6
-
-    new-instance v7, Landroid/content/Intent;
-
-    .line 219
-    const-string v8, "android.intent.action.VIEW"
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    const-string v10, "http://market.android.com/details?id="
-
-    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcom/androidemu/nes/EmulatorSettings;->getPackageName()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-static {v9}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v9
-
-    invoke-direct {v7, v8, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    .line 218
     invoke-virtual {v6, v7}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
     .line 223

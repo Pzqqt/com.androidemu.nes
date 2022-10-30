@@ -1,5 +1,11 @@
 # Nesoid
 
+---
+
+## 此分支不再更新。
+
+---
+
 [English](README.MD) | 简体中文
 
 Nesoid是一个很古老的适用于Android设备的NES模拟器，它诞生于Android 2.x时代。
@@ -21,12 +27,13 @@ Nesoid是开源的。你可以在 [这里](https://sourceforge.net/p/nesoid/code
   - 优化布局，使其更适应大屏设备
 - 支持自动旋转和反向横屏
 - 支持直接打开nsf文件
+- 支持在全屏模式隐藏导航栏
 - 更改游戏内截图的保存位置到 `/sdcard/Pictures/Screenshots`
 - 其他一些修复
 
 ## 已知的问题
 
-- 无法打开FDS rom，虽然Nesoid声称支持
+- ~~无法打开FDS rom，虽然Nesoid声称支持~~ `61-2.5` 确实不支持，但是 `62-2.5.0` 支持。
 
 ## 编译
 

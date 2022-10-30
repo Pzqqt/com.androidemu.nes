@@ -1,5 +1,11 @@
 # Nesoid
 
+---
+
+## This branch is no longer updated.
+
+---
+
 English | [简体中文](README_CH.MD)
 
 Nesoid is a very old NES emulator for Android devices, which was born in the Android 2.x era.
@@ -21,12 +27,13 @@ This repository is based on reverse engineering of the final version [com.androi
   - Optimized the layout to make it more suitable for large-screen devices
 - Support auto-rotate and reverse landscape
 - Support to open nsf files directly
+- Support for hiding the navbar in fullscreen mode
 - Change the save location of in-game screenshots to `/sdcard/Pictures/Screenshots`
 - ... and some other fixes
 
 ## Known issues
 
-- Can not open FDS rom, although Nesoid claims to support
+- ~~Can not open FDS rom, although Nesoid claims to support~~ `61-2.5` does not support this feature, but version `62-2.5.0` does.
 
 ## How to compile
 

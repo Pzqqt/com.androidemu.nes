@@ -4343,6 +4343,55 @@
     return-void
 .end method
 
+.method private setFullScreenMode(Landroid/content/SharedPreferences;)V
+    .locals 3
+    .param p1, "prefs"    # Landroid/content/SharedPreferences;
+
+    .prologue
+    invoke-virtual {p0}, Lcom/androidemu/nes/EmulatorActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    .local v0, "attrs":Landroid/view/WindowManager$LayoutParams;
+    const-string v1, "fullScreenMode"
+
+    const/4 v2, 0x1
+
+    invoke-interface {p1, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    if-eqz v1, :goto_0
+
+    iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    or-int/lit16 v1, v1, 0x400
+
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    goto :goto_1
+
+    :goto_0
+    iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    and-int/lit16 v1, v1, -0x401
+
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    :goto_1
+
+    invoke-virtual {p0}, Lcom/androidemu/nes/EmulatorActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+
+    return-void
+.end method
 .method public onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
     .locals 10
     .param p1, "prefs"    # Landroid/content/SharedPreferences;
@@ -4387,53 +4436,11 @@
     if-eqz v4, :cond_3
 
     .line 468
-    invoke-virtual {p0}, Lcom/androidemu/nes/EmulatorActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object v0
-
-    .line 469
-    .local v0, "attrs":Landroid/view/WindowManager$LayoutParams;
-    const-string v4, "fullScreenMode"
-
-    invoke-interface {p1, v4, v5}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    .line 470
-    iget v4, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
-
-    or-int/lit16 v4, v4, 0x400
-
-    iput v4, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
-
-    .line 473
-    :goto_1
-    invoke-virtual {p0}, Lcom/androidemu/nes/EmulatorActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+    invoke-direct {p0, p1}, Lcom/androidemu/nes/EmulatorActivity;->setFullScreenMode(Landroid/content/SharedPreferences;)V
 
     goto :goto_0
 
-    .line 472
-    :cond_2
-    iget v4, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
-
-    and-int/lit16 v4, v4, -0x401
-
-    iput v4, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
-
-    goto :goto_1
-
     .line 475
-    .end local v0    # "attrs":Landroid/view/WindowManager$LayoutParams;
     :cond_3
     const-string v4, "fastForwardSpeed"
 

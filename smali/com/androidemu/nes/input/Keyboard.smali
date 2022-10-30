@@ -92,7 +92,7 @@
 
     .prologue
     .line 31
-    if-ltz p2, :cond_0
+    if-lez p2, :cond_0
 
     iget-object v0, p0, Lcom/androidemu/nes/input/Keyboard;->keysMap:[I
 

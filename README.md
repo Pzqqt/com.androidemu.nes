@@ -4,7 +4,7 @@ English | [简体中文](README_CH.md)
 
 Nesoid is a very old NES emulator for Android devices, which was born in the Android 2.x era.
 
-~~Nesoid is open source. You can get the latest source code [here](https://sourceforge.net/p/nesoid/code/).~~
+~~Nesoid is open source. You can get the latest source code [here](https://f-droid.org/repo/com.androidemu.nes_61_src.tar.gz).~~
 
 This repository is based on reverse engineering of the final version (versionCode: `62`, versionName: `2.5.0`). And with some modifications and fixes to accommodate modern Android devices.
 

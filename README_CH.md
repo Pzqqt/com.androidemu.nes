@@ -4,7 +4,7 @@
 
 Nesoid是一个很古老的适用于Android设备的NES模拟器，它诞生于Android 2.x时代。
 
-~~Nesoid是开源的。你可以在 [这里](https://sourceforge.net/p/nesoid/code/) 获取到最新的源代码。~~
+~~Nesoid是开源的。你可以在 [这里](https://f-droid.org/repo/com.androidemu.nes_61_src.tar.gz) 获取到最新的源代码。~~
 
 本存储库是基于最后一个版本的逆向工程（版本号: `62`, 版本名: `2.5.0`），并且为了适应现代的Android设备而做了一些修改和修复。
 

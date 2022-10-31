@@ -75,6 +75,8 @@
 
 .field private view:Landroid/view/View;
 
+.field private widerKeyResponse:Z
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -410,6 +412,10 @@
 
     .line 368
     :cond_2
+    iget-boolean v5, p0, Lcom/androidemu/nes/input/VirtualKeypad;->widerKeyResponse:Z
+
+    if-eqz v5, :cond_0
+
     if-le v3, v1, :cond_0
 
     iget-object v5, p0, Lcom/androidemu/nes/input/VirtualKeypad;->selectStart:Lcom/androidemu/nes/input/VirtualKeypad$Control;
@@ -2279,6 +2285,20 @@
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Lcom/androidemu/nes/input/VirtualKeypad;->dpad4Way:Z
+
+    const-string v14, "widerKeyResponse"
+
+    const/4 v15, 0x0
+
+    invoke-interface {v7, v14, v15}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v14
+
+    move v0, v14
+
+    move-object/from16 v1, p0
+
+    iput-boolean v0, v1, Lcom/androidemu/nes/input/VirtualKeypad;->widerKeyResponse:Z
 
     .line 102
     const-string v14, "dpadDeadZone"

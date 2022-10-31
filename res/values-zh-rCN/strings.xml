@@ -187,4 +187,6 @@ IP: %1$s
     <string name="gamepad_A_turbo">连发 A 键</string>
     <string name="gamepad_B_turbo">连发 B 键</string>
     <string name="gamepad_AB">A 键 &amp; B 键</string>
+    <string name="wider_key_response">更大的按键响应范围</string>
+    <string name="wider_key_response_summary">即使按下位置不在虚拟键盘图像内部</string>
 </resources>

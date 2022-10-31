@@ -361,6 +361,10 @@
 
 .field public static final vkeypad_transparency:I = 0x7f070073
 
+.field public static final wider_key_response:I = 0x7f0700b3
+
+.field public static final wider_key_response_summary:I = 0x7f0700b4
+
 .field public static final wifi_client:I = 0x7f070020
 
 .field public static final wifi_not_available:I = 0x7f07002f

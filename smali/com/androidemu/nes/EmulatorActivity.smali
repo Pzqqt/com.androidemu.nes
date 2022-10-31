@@ -359,7 +359,7 @@
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/androidemu/nes/EmulatorActivity;)V
+.method static synthetic access$onLoadState(Lcom/androidemu/nes/EmulatorActivity;)V
     .locals 0
     .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
 
@@ -368,7 +368,7 @@
     return-void
 .end method
 
-.method static synthetic access$201(Lcom/androidemu/nes/EmulatorActivity;)V
+.method static synthetic access$onSaveState(Lcom/androidemu/nes/EmulatorActivity;)V
     .locals 0
     .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
 
@@ -377,7 +377,7 @@
     return-void
 .end method
 
-.method static synthetic access$203(Lcom/androidemu/nes/EmulatorActivity;)V
+.method static synthetic access$doChangeDisk(Lcom/androidemu/nes/EmulatorActivity;)V
     .locals 2
     .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
 
@@ -406,7 +406,7 @@
     return-void
 .end method
 
-.method static synthetic access$204(Lcom/androidemu/nes/EmulatorActivity;)V
+.method static synthetic access$onFastForward(Lcom/androidemu/nes/EmulatorActivity;)V
     .locals 0
     .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
 
@@ -415,7 +415,7 @@
     return-void
 .end method
 
-.method static synthetic access$206(Lcom/androidemu/nes/EmulatorActivity;)V
+.method static synthetic access$doReset(Lcom/androidemu/nes/EmulatorActivity;)V
     .locals 0
     .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
 
@@ -424,7 +424,7 @@
     return-void
 .end method
 
-.method static synthetic access$207(Lcom/androidemu/nes/EmulatorActivity;)V
+.method static synthetic access$doPower(Lcom/androidemu/nes/EmulatorActivity;)V
     .locals 0
     .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
 
@@ -433,7 +433,7 @@
     return-void
 .end method
 
-.method static synthetic access$208(Lcom/androidemu/nes/EmulatorActivity;)V
+.method static synthetic access$onScreenshot(Lcom/androidemu/nes/EmulatorActivity;)V
     .locals 0
     .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
 

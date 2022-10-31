@@ -51,47 +51,47 @@
     :goto_0
     return-void
 
-    :pswitch_0
-    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$200(Lcom/androidemu/nes/EmulatorActivity;)V
+    :pswitch_onLoadState
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$onLoadState(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
-    :pswitch_1
-    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$201(Lcom/androidemu/nes/EmulatorActivity;)V
+    :pswitch_onSaveState
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$onSaveState(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
-    :pswitch_3
-    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$203(Lcom/androidemu/nes/EmulatorActivity;)V
+    :pswitch_doChangeDisk
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$doChangeDisk(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
-    :pswitch_4
-    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$204(Lcom/androidemu/nes/EmulatorActivity;)V
+    :pswitch_onFastForward
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$onFastForward(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
-    :pswitch_6
-    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$206(Lcom/androidemu/nes/EmulatorActivity;)V
+    :pswitch_doReset
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$doReset(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
-    :pswitch_7
-    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$207(Lcom/androidemu/nes/EmulatorActivity;)V
+    :pswitch_doPower
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$doPower(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
-    :pswitch_8
-    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$208(Lcom/androidemu/nes/EmulatorActivity;)V
+    :pswitch_onScreenshot
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$onScreenshot(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
-    :pswitch_9
+    :pswitch_finish
     invoke-virtual {v0}, Lcom/androidemu/nes/EmulatorActivity;->finish()V
 
     goto :goto_0
 
-    :pswitch_2
+    :pswitch_gotoSettings
 
     new-instance v1, Landroid/content/Intent;
 
@@ -103,7 +103,7 @@
 
     goto :goto_0
 
-    :pswitch_5
+    :pswitch_gotoCheats
 
     new-instance v1, Landroid/content/Intent;
 
@@ -119,15 +119,15 @@
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-        :pswitch_8
-        :pswitch_9
+        :pswitch_onLoadState
+        :pswitch_onSaveState
+        :pswitch_gotoSettings
+        :pswitch_doChangeDisk
+        :pswitch_onFastForward
+        :pswitch_gotoCheats
+        :pswitch_doReset
+        :pswitch_doPower
+        :pswitch_onScreenshot
+        :pswitch_finish
     .end packed-switch
 .end method

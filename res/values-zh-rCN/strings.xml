@@ -15,10 +15,10 @@
     <string name="shortcut_name">快捷名称</string>
     <string name="github">Github</string>
     <string name="help">帮助</string>
-    <string name="load_rom_failed">游戏载入失败，请选择其他游戏文件</string>
+    <string name="load_rom_failed">游戏载入失败, 请选择其他游戏文件</string>
     <string name="rom_not_supported">不支持此类别游戏文件</string>
     <string name="replace_game_title">替换游戏</string>
-    <string name="replace_game_message">当前游戏进度将会丢失，是否重新开始游戏？</string>
+    <string name="replace_game_message">当前游戏进度将会丢失, 是否重新开始游戏？</string>
     <string name="quit_game_title">关闭游戏</string>
     <string name="load_state_title">载入进度</string>
     <string name="save_state_title">保存进度</string>
@@ -29,7 +29,7 @@
     <string name="reset">重新开始</string>
     <string name="power">电源开关</string>
     <string name="change_disk">切换磁碟</string>
-    <string name="change_disk_warning">此 ROM 不支持切换磁碟。</string>
+    <string name="change_disk_warning">此 ROM 不支持切换磁碟.</string>
     <string name="disk_side">磁碟 %1$d %2$c 面</string>
     <string name="netplay_connect">联网对战</string>
     <string name="netplay_disconnect">断开连接</string>
@@ -48,8 +48,8 @@
     <string name="close">关闭</string>
     <string name="connection_closed">已断开远程连接</string>
     <string name="connect_failed">远程连接失败</string>
-    <string name="protocol_incompatible">协议不兼容！请将两个终端的协议更新到最新版本</string>
-    <string name="wifi_not_available">Wi-Fi 网络不可用！</string>
+    <string name="protocol_incompatible">协议不兼容! 请将两个终端的协议更新到最新版本</string>
+    <string name="wifi_not_available">Wi-Fi 网络不可用!</string>
     <string name="wifi_server_listening">"正在等候连接到:
 
 IP: %1$s
@@ -75,16 +75,16 @@ IP: %1$s
     <string name="title_paired_devices">已配对设备</string>
     <string name="title_other_devices">其他可用设备</string>
     <string name="button_scan">扫描设备</string>
-    <string name="no_cheats_help">"您还没有添加任何作弊码。
+    <string name="no_cheats_help">"您还没有添加任何作弊码.
 
-如需作弊，请点击 "<b><font fgcolor="#ffffffff">菜单</font></b> 之后点击 <b><font fgcolor="#ffffffff">新建作弊码</font></b>"。 作弊码格式为:
+如需作弊, 请点击 "<b><font fgcolor="#ffffffff">菜单</font></b> 之后点击 <b><font fgcolor="#ffffffff">新建作弊码</font></b>". 作弊码格式为:
  
 "<li><b><font fgcolor="#ffffffff">Game Genie</font></b> (eg. SLAIUZ)</li>"
 "</string>
     <string name="new_cheat">新建作弊码</string>
     <string name="cheat_code">作弊码:</string>
     <string name="cheat_name">名称 (可选):</string>
-    <string name="invalid_cheat_code">作弊码无效！</string>
+    <string name="invalid_cheat_code">作弊码无效!</string>
     <string name="audio_video_settings">音频 &amp; 视频 设置</string>
     <string name="audio_settings">音频设置</string>
     <string name="enable_sound">开启声音</string>
@@ -98,13 +98,13 @@ IP: %1$s
     <string name="max_frame_skips">最大帧数​​​​​​​​​​​</string>
     <string name="max_frame_skips_summary">指定连续跳帧的最大数量</string>
     <string name="refresh_rate">屏幕刷新率</string>
-    <string name="refresh_rate_summary">MOTO Droid 2.1 用户须将此数值设为 30！</string>
+    <string name="refresh_rate_summary">MOTO Droid 2.1 用户须将此数值设为 30!</string>
     <string name="accurate_rendering">精确绘制</string>
-    <string name="accurate_rendering_summary">Punch Out 需要这个！</string>
+    <string name="accurate_rendering_summary">某些游戏需要这个 (比如: Punch-Out)</string>
     <string name="accurate_rendering_prompt">直到重新加载游戏后才可生效</string>
     <string name="input_settings">输入设置​​​​​​​​​​</string>
     <string name="second_controller">2号玩家配置</string>
-    <string name="second_controller_summary">注意！需要关闭虚拟键盘才能使用光枪控制器</string>
+    <string name="second_controller_summary">注意! 需要关闭虚拟键盘才能使用光枪控制器</string>
     <string name="key_mappings">设置按键映射</string>
     <string name="key_mappings_summary">将设备的物理按键映射到游戏按键</string>
     <string name="gamepad_1">手柄 1</string>
@@ -116,14 +116,14 @@ IP: %1$s
     <string name="vkeypad_settings_summary">设置触屏的虚拟键盘</string>
     <string name="enable_vibrator">键盘振动</string>
     <string name="enable_vkeypad">启用虚拟键盘</string>
-    <string name="multitouch_unsupported">此选项需要你的设备支持多点触控！</string>
+    <string name="multitouch_unsupported">此选项需要你的设备支持多点触控!</string>
     <string name="dpad_4way">禁用斜向十字键</string>
     <string name="dpad_deadzone">十字键盲区大小</string>
     <string name="two_buttons_press">双键连按</string>
-    <string name="in_between_press">中键按下</string>
-    <string name="in_between_press_summary">同时模拟“双键连按”和“中键按下”设置</string>
+    <string name="in_between_press">中间按下</string>
+    <string name="in_between_press_summary">在两个按键中间按下以模拟同时按下</string>
     <string name="point_size_press">触摸点大小</string>
-    <string name="point_size_press_summary">取决于触摸点大小（不适用于所有设备）</string>
+    <string name="point_size_press_summary">取决于触摸点大小 (不适用于所有设备)</string>
     <string name="point_size_press_threshold">触摸点大小阀值</string>
     <string name="appearance">界面设置</string>
     <string name="vkeypad_size">虚拟按键大小</string>
@@ -134,7 +134,7 @@ IP: %1$s
     <string name="hide_extra_buttons">隐藏连发 A/B 键</string>
     <string name="disable_extra_buttons">禁用连发 A/B 键</string>
     <string name="hide_select_start">隐藏 Select/Start 键</string>
-    <string name="vkeypad_layout">十字键与A、B键布局</string>
+    <string name="vkeypad_layout">十字键与 A/B 键布局</string>
     <string name="layout_margin_x">水平布局边距</string>
     <string name="layout_margin_y">垂直布局边距</string>
     <string name="enable_trackball">设置轨迹球为方向键​​​​​​​​​</string>
@@ -143,7 +143,7 @@ IP: %1$s
     <string name="sensor_sensitivity">传感器灵敏度</string>
     <string name="netplay_settings">联网对战设置</string>
     <string name="max_frames_ahead">最大跳帧帧数</string>
-    <string name="max_frames_ahead_summary">非 0 数值可能会产生严重同步问题！</string>
+    <string name="max_frames_ahead_summary">非 0 数值可能会产生严重同步问题!</string>
     <string name="auto_sync_client">自动同步客户端</string>
     <string name="auto_sync_client_interval">自动同步时间间隔</string>
     <string name="other_settings">其它设置</string>
@@ -157,13 +157,13 @@ IP: %1$s
     <string name="full_screen_mode">全屏模式​​​​​​​​​​​</string>
     <string name="full_screen_mode_summary">隐藏系统通知栏​​​​​​​​​​​​​​​​​​​​​</string>
     <string name="hide_navigation_bar">隐藏导航栏</string>
-    <string name="hide_navigation_bar_summary">在Android 4.4+系统上同时隐藏导航栏</string>
+    <string name="hide_navigation_bar_summary">在 Android 4.4+ 系统上同时隐藏导航栏</string>
     <string name="orientation">屏幕方向</string>
     <string name="orientation_summary">设定游戏运行界面显示方向</string>
     <string name="quick_load_on_start">启动时自动载入</string>
     <string name="quick_load_on_start_summary">运行游戏时自动载入最新进度</string>
     <string name="use_input_method">输入设备​​​​​​​​​​​​</string>
-    <string name="use_input_method_summary">开启特殊输入设备（例如：蓝牙手柄）</string>
+    <string name="use_input_method_summary">开启特殊输入设备 (例如: 蓝牙手柄)</string>
     <string name="app_about">关于 Nesoid</string>
     <string name="upgrade">更新</string>
     <string name="license">开放源代码许可</string>

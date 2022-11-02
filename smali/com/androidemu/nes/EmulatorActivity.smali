@@ -3751,6 +3751,10 @@
     .prologue
     const/4 v1, 0x1
 
+    const/4 v0, 0x0
+
+    if-le p1, v0, :goto_0
+
     .line 272
     iget v0, p0, Lcom/androidemu/nes/EmulatorActivity;->quickLoadKey:I
 

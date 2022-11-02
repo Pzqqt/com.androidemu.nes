@@ -82,8 +82,48 @@
 
     move-result-object v1
 
-    .line 163
     .local v1, "info":Ljava/lang/String;
+    iget-object v3, p0, Lcom/androidemu/nes/DeviceListActivity$1;->this$0:Lcom/androidemu/nes/DeviceListActivity;
+
+    invoke-virtual {v3}, Lcom/androidemu/nes/DeviceListActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    .local v3, "resources":Landroid/content/res/Resources;
+    const v4, 0x7f07003f
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    const v4, 0x7f070040
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    .end local v3    # "resources":Landroid/content/res/Resources;
+    .line 163
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -121,5 +161,6 @@
     invoke-virtual {v3}, Lcom/androidemu/nes/DeviceListActivity;->finish()V
 
     .line 172
+    :cond_0
     return-void
 .end method

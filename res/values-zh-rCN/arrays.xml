@@ -49,10 +49,10 @@
         <item>自动旋转</item>
     </string-array>
     <string-array name="auto_sync_client_entries">
+        <item>3 秒</item>
+        <item>5 秒</item>
         <item>10 秒</item>
+        <item>15 秒</item>
         <item>20 秒</item>
-        <item>30 秒</item>
-        <item>45 秒</item>
-        <item>60 秒</item>
     </string-array>
 </resources>

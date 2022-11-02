@@ -4876,7 +4876,7 @@
     .line 502
     const-string v5, "autoSyncClientInterval"
 
-    const-string v6, "30"
+    const-string v6, "10"
 
     invoke-interface {v4, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

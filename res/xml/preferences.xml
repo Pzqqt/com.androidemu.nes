@@ -67,7 +67,7 @@
     <PreferenceScreen android:title="@string/netplay_settings">
         <com.androidemu.nes.SeekBarPreference android:title="@string/max_frames_ahead" android:key="maxFramesAhead" android:summary="@string/max_frames_ahead_summary" androidemu:maxValue="10" />
         <CheckBoxPreference android:title="@string/auto_sync_client" android:key="autoSyncClient" />
-        <ListPreference android:entries="@array/auto_sync_client_entries" android:title="@string/auto_sync_client_interval" android:key="autoSyncClientInterval" android:dependency="autoSyncClient" android:defaultValue="30" android:entryValues="@array/auto_sync_client_entryvalues" />
+        <ListPreference android:entries="@array/auto_sync_client_entries" android:title="@string/auto_sync_client_interval" android:key="autoSyncClientInterval" android:dependency="autoSyncClient" android:defaultValue="10" android:entryValues="@array/auto_sync_client_entryvalues" />
     </PreferenceScreen>
     <PreferenceScreen android:title="@string/other_settings">
         <PreferenceCategory android:title="@string/cheating">

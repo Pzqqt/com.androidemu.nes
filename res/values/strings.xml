@@ -34,7 +34,7 @@
     <string name="netplay_connect">Net-play</string>
     <string name="netplay_disconnect">Disconnect</string>
     <string name="wifi_server">Wi-Fi (Server)</string>
-    <string name="wifi_client">Wi-Fi (Client))</string>
+    <string name="wifi_client">Wi-Fi (Client)</string>
     <string name="bluetooth_server">Bluetooth (Server)</string>
     <string name="bluetooth_client">Bluetooth (Client)</string>
     <string name="netplay_sync">Sync</string>

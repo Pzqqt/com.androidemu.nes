@@ -189,4 +189,5 @@ To add cheats, press "<b><font fgcolor="#ffffffff">Menu</font></b> and then <b><
     <string name="gamepad_AB">Button A&amp;B</string>
     <string name="wider_key_response">Wider key response range</string>
     <string name="wider_key_response_summary">Even pressing outside the virtual keyboard image</string>
+    <string name="netplay_warning">There is an net-play in progress, please disconnect first.</string>
 </resources>

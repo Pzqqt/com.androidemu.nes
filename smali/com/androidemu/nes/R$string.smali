@@ -233,6 +233,8 @@
 
 .field public static final netplay_sync:I = 0x7f070023
 
+.field public static final netplay_warning:I = 0x7f0700b5
+
 .field public static final new_cheat:I = 0x7f070045
 
 .field public static final new_profile:I = 0x7f070038

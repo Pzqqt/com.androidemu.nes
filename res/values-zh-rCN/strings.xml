@@ -189,4 +189,5 @@ IP: %1$s
     <string name="gamepad_AB">A 键 &amp; B 键</string>
     <string name="wider_key_response">更大的按键响应范围</string>
     <string name="wider_key_response_summary">即使按下位置不在虚拟键盘图像内部</string>
+    <string name="netplay_warning">当前已有正在进行的联机游戏, 请先断开连接.</string>
 </resources>

@@ -71,6 +71,11 @@
 
     goto :goto_0
 
+    :pswitch_showNetplayConnectDialog
+    invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$showNetplayConnectDialog(Lcom/androidemu/nes/EmulatorActivity;)V
+
+    goto :goto_0
+
     :pswitch_doReset
     invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$doReset(Lcom/androidemu/nes/EmulatorActivity;)V
 
@@ -125,6 +130,7 @@
         :pswitch_doChangeDisk
         :pswitch_onFastForward
         :pswitch_gotoCheats
+        :pswitch_showNetplayConnectDialog
         :pswitch_doReset
         :pswitch_doPower
         :pswitch_onScreenshot

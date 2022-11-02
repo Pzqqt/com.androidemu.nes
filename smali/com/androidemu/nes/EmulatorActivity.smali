@@ -442,6 +442,94 @@
     return-void
 .end method
 
+.method static synthetic access$showNetplayConnectDialog(Lcom/androidemu/nes/EmulatorActivity;)V
+    .locals 0
+    .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
+
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->showNetplayConnectDialog()V
+
+    return-void
+.end method
+
+.method static synthetic access$doBluetoothServer(Lcom/androidemu/nes/EmulatorActivity;)V
+    .locals 2
+    .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
+
+    const/4 v0, 0x3
+
+    invoke-direct {p0, v0}, Lcom/androidemu/nes/EmulatorActivity;->checkBluetoothEnabled(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->onBluetoothServer()V
+
+    :cond_0
+    return-void
+.end method
+
+.method static synthetic access$doBluetoothClient(Lcom/androidemu/nes/EmulatorActivity;)V
+    .locals 2
+    .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p0, v0}, Lcom/androidemu/nes/EmulatorActivity;->checkBluetoothEnabled(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->onBluetoothClient()V
+
+    :cond_0
+    return-void
+.end method
+
+.method static synthetic access$doWifiServer(Lcom/androidemu/nes/EmulatorActivity;)V
+    .locals 0
+    .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
+
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->onWifiServer()V
+
+    return-void
+.end method
+
+.method static synthetic access$doWifiClient(Lcom/androidemu/nes/EmulatorActivity;)V
+    .locals 1
+    .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p0, v0}, Lcom/androidemu/nes/EmulatorActivity;->showDialog(I)V
+
+    return-void
+.end method
+
+.method static synthetic access$onNetPlaySync(Lcom/androidemu/nes/EmulatorActivity;)V
+    .locals 1
+    .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
+
+    iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity;->netPlayService:Lcom/androidemu/nes/NetPlayService;
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->onNetPlaySync()V
+
+    :cond_0
+    return-void
+.end method
+
+.method static synthetic access$onDisconnect(Lcom/androidemu/nes/EmulatorActivity;)V
+    .locals 0
+    .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
+
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->onDisconnect()V
+
+    return-void
+.end method
+
 .method private applyNetplaySettings()V
     .locals 4
 
@@ -607,6 +695,76 @@
 
     .line 828
     return-object v1
+.end method
+
+.method private showNetplayConnectDialog()V
+    .locals 6
+
+    .prologue
+    new-instance v0, Lcom/androidemu/nes/EmulatorActivity$NetplayConnectDialog_OnClickListener;
+    invoke-direct {v0, p0}, Lcom/androidemu/nes/EmulatorActivity$NetplayConnectDialog_OnClickListener;-><init>(Lcom/androidemu/nes/EmulatorActivity;)V
+    .local v0, "l":Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {p0}, Lcom/androidemu/nes/EmulatorActivity;->getResources()Landroid/content/res/Resources;
+    move-result-object v3
+    .local v3, "resources":Landroid/content/res/Resources;
+
+    new-instance v1, Landroid/app/AlertDialog$Builder;
+    invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    const v2, 0x7f07001d
+    invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+    move-result-object v1
+
+    const/4 v2, 0x6
+    new-array v2, v2, [Ljava/lang/String;
+    .local v2, "itemStrings":[Ljava/lang/String;
+
+    const v4, 0x7f070021    # bluetooth_server
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    move-result-object v5
+    const/4 v4, 0x0
+    aput-object v5, v2, v4
+
+    const v4, 0x7f070022    # bluetooth_client
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    move-result-object v5
+    const/4 v4, 0x1
+    aput-object v5, v2, v4
+
+    const v4, 0x7f07001f    # wifi_server
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    move-result-object v5
+    const/4 v4, 0x2
+    aput-object v5, v2, v4
+
+    const v4, 0x7f070020    # wifi_client
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    move-result-object v5
+    const/4 v4, 0x3
+    aput-object v5, v2, v4
+
+    const v4, 0x7f070023    # netplay_sync
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    move-result-object v5
+    const/4 v4, 0x4
+    aput-object v5, v2, v4
+
+    const v4, 0x7f07001e    # menu_netplay_disconnect
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    move-result-object v5
+    const/4 v4, 0x5
+    aput-object v5, v2, v4
+
+    invoke-virtual {v1, v2, v0}, Landroid/app/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
+
+    return-void
 .end method
 
 .method private createReplaceGameDialog()Landroid/app/Dialog;

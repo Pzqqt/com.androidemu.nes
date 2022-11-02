@@ -225,6 +225,7 @@
     <public type="string" name="change_disk_warning" id="0x7f0700b2" />
     <public type="string" name="wider_key_response" id="0x7f0700b3" />
     <public type="string" name="wider_key_response_summary" id="0x7f0700b4" />
+    <public type="string" name="netplay_warning" id="0x7f0700b5" />
     <public type="menu" name="cheats" id="0x7f080000" />
     <public type="menu" name="emulator" id="0x7f080001" />
     <public type="menu" name="file_chooser" id="0x7f080002" />

@@ -76,6 +76,7 @@
         <item>@string/change_disk</item>
         <item>@string/fast_forward</item>
         <item>@string/cheats</item>
+        <item>@string/netplay_connect</item>
         <item>@string/reset</item>
         <item>@string/power</item>
         <item>@string/screenshot</item>

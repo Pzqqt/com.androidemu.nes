@@ -22,8 +22,14 @@ Nesoid是一个很古老的适用于Android设备的NES模拟器，它诞生于A
 - 支持自动旋转和反向横屏
 - 支持直接打开nsf文件
 - 支持在全屏模式隐藏导航栏
+- 重新绘制了应用图标
+- 启用硬件加速
 - 更改游戏内截图的保存位置到 `/sdcard/Pictures/Screenshots`
 - 其他一些修复
+
+## 下载
+
+[Github Releases](https://github.com/Pzqqt/com.androidemu.nes/releases/latest)
 
 ## 编译
 
@@ -44,3 +50,23 @@ Nesoid是一个很古老的适用于Android设备的NES模拟器，它诞生于A
 2. 为什么我在玩游戏时会感受到卡顿或丢帧？
 
 > 很有可能是因为你的设备屏幕刷新率高于60，请在系统设置中将屏幕刷新率锁定为60。
+
+3. 支持FDS rom吗？
+
+> 支持，但是你需要准备磁碟机系统文件（disksys.rom），然后在模拟器设置中导入它。
+
+4. 支持哪些rom？
+
+> 这个模拟器的核心基于FCEU，因此它的兼容性很好。但是：
+> 1. 不支持[UNIF（Universal NES Interchange format）](https://www.nesdev.org/wiki/UNIF)格式的rom
+> 2. 不支持某些奇葩的合卡rom
+> 3. 不支持某些国产寨商的rom
+> 4. 对mapper 163的rom支持不是很好（南晶科技的rom绝大多数都是mapper 163）
+
+5. 网络对战功能可用吗？
+
+> 可以的！我在一台搭载了Android 11的Redmi Note 5 Pro和另一台搭载了Android 12.1的Redmi K30上进行了测试，无论是蓝牙联机还是WiFi联机都没问题。
+
+6. 光枪可用吗？
+
+> 可以的，但是你需要先关闭虚拟键盘。

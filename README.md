@@ -22,8 +22,14 @@ This repository is based on reverse engineering of the final version (versionCod
 - Support auto-rotate and reverse landscape
 - Support to open nsf files directly
 - Support for hiding the navbar in fullscreen mode
+- Redrawn app icon
+- Enable hardware acceleration
 - Change the save location of in-game screenshots to `/sdcard/Pictures/Screenshots`
 - ... and some other fixes
+
+## Download
+
+[Github Releases](https://github.com/Pzqqt/com.androidemu.nes/releases/latest)
 
 ## How to compile
 
@@ -44,3 +50,22 @@ This repository is based on reverse engineering of the final version (versionCod
 2. Why do I experience dropped frames when playing games?
 
 > Most likely it's because your device's screen refresh rate is higher than 60. Please lock the screen refresh rate to 60 in system settings.
+
+3. Does it support FDS roms?
+
+> Yes, but you need the disk drive system file (disksys.rom), then import it in the emulator settings.
+
+4. Which roms does it support?
+
+> The core of this emulator is based on FCEU, so its compatibility is good. But:
+> 1. [UNIF (Universal NES Interchange format)](https://www.nesdev.org/wiki/UNIF) format roms are not supported
+> 2. Some weird XXX-in-1 roms are not supported
+> 3. The roms of some Chinese pirated manufacturers are not supported
+> 4. Rom support for mapper 163 is not good (many of the roms of China NanJing Technology (南晶科技) are mapper 163)
+
+5. Is Net-play available?
+
+> Yes! I tested it on a Redmi Note 5 Pro with Android 11 and another Redmi K30 with Android 12.1, and it works fine with both Bluetooth and WiFi.
+
+6. Is Zapper available?
+> Yes, but you need to turn off the virtual keyboard first.

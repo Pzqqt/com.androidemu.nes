@@ -196,7 +196,6 @@
     <public type="string" name="use_input_method" id="0x7f070095" />
     <public type="string" name="use_input_method_summary" id="0x7f070096" />
     <public type="string" name="app_about" id="0x7f070097" />
-    <public type="string" name="upgrade" id="0x7f070098" />
     <public type="string" name="license" id="0x7f070099" />
     <public type="string" name="legal" id="0x7f07009a" />
     <public type="string" name="press_key_prompt" id="0x7f07009b" />

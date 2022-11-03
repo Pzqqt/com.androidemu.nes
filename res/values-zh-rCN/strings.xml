@@ -165,7 +165,6 @@ IP: %1$s
     <string name="use_input_method">输入设备​​​​​​​​​​​​</string>
     <string name="use_input_method_summary">开启特殊输入设备 (例如: 蓝牙手柄)</string>
     <string name="app_about">关于 Nesoid</string>
-    <string name="upgrade">更新</string>
     <string name="license">开放源代码许可</string>
     <string name="legal">法律声明</string>
     <string name="press_key_prompt">请按下物理按键...</string>

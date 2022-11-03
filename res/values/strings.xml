@@ -165,7 +165,6 @@ To add cheats, press "<b><font fgcolor="#ffffffff">Menu</font></b> and then <b><
     <string name="use_input_method">Use input method</string>
     <string name="use_input_method_summary">Enable special input device (eg. bluetooth gamepad)</string>
     <string name="app_about">About Nesoid</string>
-    <string name="upgrade">Upgrade</string>
     <string name="license">License</string>
     <string name="legal">Legal</string>
     <string name="press_key_prompt">Press a hardware key...</string>

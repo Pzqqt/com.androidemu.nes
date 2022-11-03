@@ -343,8 +343,6 @@
 
 .field public static final two_buttons_press:I = 0x7f07006b
 
-.field public static final upgrade:I = 0x7f070098
-
 .field public static final use_input_method:I = 0x7f070095
 
 .field public static final use_input_method_summary:I = 0x7f070096

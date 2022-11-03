@@ -1,5 +1,5 @@
 !!brut.androlib.meta.MetaInfo
-apkFileName: com.androidemu.nes-62-2.5.0.apk
+apkFileName: com.androidemu.nes-63-2.5.1.apk
 compressionType: false
 doNotCompress:
 - resources.arsc
@@ -20,5 +20,5 @@ usesFramework:
   tag: null
 version: 2.6.1
 versionInfo:
-  versionCode: '62'
-  versionName: 2.5.0
+  versionCode: '63'
+  versionName: 2.5.1

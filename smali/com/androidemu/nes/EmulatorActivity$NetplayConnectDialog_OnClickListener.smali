@@ -76,51 +76,38 @@
 
     iget-object v0, p0, Lcom/androidemu/nes/EmulatorActivity$NetplayConnectDialog_OnClickListener;->this$0:Lcom/androidemu/nes/EmulatorActivity;
 
+    const/4 v1, 0x3
+
+    if-gt p2, v1, :cond_0
+
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity$NetplayConnectDialog_OnClickListener;->checkRunningNetPlay()Z
+
+    move-result v1
+
+    if-nez v1, :goto_0
+
+    :cond_0
     packed-switch p2, :pswitch_data_0
 
     :goto_0
     return-void
 
     :pswitch_doBluetoothServer
-    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity$NetplayConnectDialog_OnClickListener;->checkRunningNetPlay()Z
-
-    move-result v1
-
-    if-nez v1, :goto_0
-
     invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$doBluetoothServer(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
     :pswitch_doBluetoothClient
-    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity$NetplayConnectDialog_OnClickListener;->checkRunningNetPlay()Z
-
-    move-result v1
-
-    if-nez v1, :goto_0
-
     invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$doBluetoothClient(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
     :pswitch_doWifiServer
-    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity$NetplayConnectDialog_OnClickListener;->checkRunningNetPlay()Z
-
-    move-result v1
-
-    if-nez v1, :goto_0
-
     invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$doWifiServer(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0
 
     :pswitch_doWifiClient
-    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity$NetplayConnectDialog_OnClickListener;->checkRunningNetPlay()Z
-
-    move-result v1
-
-    if-nez v1, :goto_0
-
     invoke-static {v0}, Lcom/androidemu/nes/EmulatorActivity;->access$doWifiClient(Lcom/androidemu/nes/EmulatorActivity;)V
 
     goto :goto_0

@@ -253,6 +253,10 @@
 
 .field public static final none_paired:I = 0x7f07003f
 
+.field public static final occupy_cutout_area:I = 0x7f0700b6
+
+.field public static final occupy_cutout_area_summary:I = 0x7f0700b7
+
 .field public static final orientation:I = 0x7f070091
 
 .field public static final orientation_summary:I = 0x7f070092

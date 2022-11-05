@@ -158,6 +158,8 @@ IP: %1$s
     <string name="full_screen_mode_summary">隐藏系统通知栏​​​​​​​​​​​​​​​​​​​​​</string>
     <string name="hide_navigation_bar">隐藏导航栏</string>
     <string name="hide_navigation_bar_summary">在 Android 4.4+ 系统上同时隐藏导航栏</string>
+    <string name="occupy_cutout_area">允许占用刘海区域</string>
+    <string name="occupy_cutout_area_summary">游戏画面和虚拟键盘将会占用刘海区域</string>
     <string name="orientation">屏幕方向</string>
     <string name="orientation_summary">设定游戏运行界面显示方向</string>
     <string name="quick_load_on_start">启动时自动载入</string>

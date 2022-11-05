@@ -3342,7 +3342,7 @@
     iput-object v3, p0, Lcom/androidemu/nes/EmulatorActivity;->keyboard:Lcom/androidemu/nes/input/Keyboard;
 
     .line 141
-    const/16 v3, 0x18
+    const/16 v3, 0x19
 
     new-array v1, v3, [Ljava/lang/String;
 
@@ -3505,6 +3505,12 @@
 
     .line 165
     const-string v4, "screenshot"
+
+    aput-object v4, v1, v3
+
+    const/16 v3, 0x18
+
+    const-string v4, "occupyCutoutArea"
 
     aput-object v4, v1, v3
 
@@ -4638,6 +4644,47 @@
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setSystemUiVisibility(I)V
 
+    .end local v0    # "decorView":Landroid/view/View;
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x1c    # 28, Android 9, Pie
+
+    if-lt v1, v2, :goto_ff
+
+    # Build.VERSION.SDK_INT >= 28
+
+    const-string v1, "occupyCutoutArea"
+
+    const/4 v2, 0x0
+
+    invoke-interface {p1, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    const/4 v2, 0x0    # LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT
+    .local v2, "mode":I
+
+    if-eqz v1, :cond_3
+
+    const/4 v2, 0x1    # LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
+
+    :cond_3
+
+    invoke-virtual {p0}, Lcom/androidemu/nes/EmulatorActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    .local v0, "attrs":Landroid/view/WindowManager$LayoutParams;
+
+    iput v2, v0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
+
+    invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+
     :goto_ff
     return-void
 .end method
@@ -4684,7 +4731,7 @@
 
     if-eqz v4, :cond_30
 
-    goto :cond_31
+    goto :cond_32
 
     :cond_30
     const-string v4, "hideNavigationBar"
@@ -4693,9 +4740,20 @@
 
     move-result v4
 
-    if-eqz v4, :cond_3
+    if-eqz v4, :cond_31
+
+    goto :cond_32
 
     :cond_31
+    const-string v4, "occupyCutoutArea"
+
+    invoke-virtual {v4, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    :cond_32
     invoke-direct {p0, p1}, Lcom/androidemu/nes/EmulatorActivity;->setFullScreenMode(Landroid/content/SharedPreferences;)V
 
     goto :goto_0

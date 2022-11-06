@@ -44,8 +44,7 @@ This repository is based on reverse engineering of the final version (versionCod
 > For three reasons：
 > 1. Ancient stuff should keep it ancient, but also means compatibility
 > 2. The source code for the latest version (`62-2.5.0`) can't seem to be found on the web
-> 3. I don't really understand how to compile apk from source
-> 4. I'm lazy:)
+> 3. I'm lazy:)
 
 2. Why do I experience dropped frames when playing games?
 
@@ -69,3 +68,6 @@ This repository is based on reverse engineering of the final version (versionCod
 
 6. Is Zapper available?
 > Yes, but you need to turn off the virtual keyboard first.
+
+7. Why is the input method keyboard sometimes displayed when entering the game?
+> Turn on "Use input method" in app settings, do not ask me why.

@@ -82,6 +82,10 @@
 
 .field private quickSaveKey:I
 
+.field private quickResetKey:I
+
+.field private quickPowerKey:I
+
 .field private screenshotKey:I
 
 .field private sensor:Lcom/androidemu/nes/input/SensorKeypad;
@@ -3342,7 +3346,7 @@
     iput-object v3, p0, Lcom/androidemu/nes/EmulatorActivity;->keyboard:Lcom/androidemu/nes/input/Keyboard;
 
     .line 141
-    const/16 v3, 0x19
+    const/16 v3, 0x1b
 
     new-array v1, v3, [Ljava/lang/String;
 
@@ -3511,6 +3515,18 @@
     const/16 v3, 0x18
 
     const-string v4, "occupyCutoutArea"
+
+    aput-object v4, v1, v3
+
+    const/16 v3, 0x19
+
+    const-string v4, "quickReset"
+
+    aput-object v4, v1, v3
+
+    const/16 v3, 0x1a
+
+    const-string v4, "quickPower"
 
     aput-object v4, v1, v3
 
@@ -3965,7 +3981,7 @@
     :cond_2
     iget v0, p0, Lcom/androidemu/nes/EmulatorActivity;->screenshotKey:I
 
-    if-ne p1, v0, :cond_3
+    if-ne p1, v0, :cond_is_quickReset
 
     .line 285
     invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->onScreenshot()V
@@ -3973,6 +3989,28 @@
     move v0, v1
 
     .line 286
+    goto :goto_0
+
+    :cond_is_quickReset
+    iget v0, p0, Lcom/androidemu/nes/EmulatorActivity;->quickResetKey:I
+
+    if-ne p1, v0, :cond_is_quickPower
+
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->doReset()V
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_is_quickPower
+    iget v0, p0, Lcom/androidemu/nes/EmulatorActivity;->quickPowerKey:I
+
+    if-ne p1, v0, :cond_3
+
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->doPower()V
+
+    move v0, v1
+
     goto :goto_0
 
     .line 289
@@ -5500,7 +5538,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_22
 
     .line 585
     invoke-interface {p1, p2, v6}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
@@ -5508,6 +5546,40 @@
     move-result v4
 
     iput v4, p0, Lcom/androidemu/nes/EmulatorActivity;->screenshotKey:I
+
+    goto/16 :goto_0
+
+    :cond_22
+    const-string v4, "quickReset"
+
+    invoke-virtual {v4, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_23
+
+    invoke-interface {p1, p2, v6}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v4
+
+    iput v4, p0, Lcom/androidemu/nes/EmulatorActivity;->quickResetKey:I
+
+    goto/16 :goto_0
+
+    :cond_23
+    const-string v4, "quickPower"
+
+    invoke-virtual {v4, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {p1, p2, v6}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v4
+
+    iput v4, p0, Lcom/androidemu/nes/EmulatorActivity;->quickPowerKey:I
 
     goto/16 :goto_0
 .end method

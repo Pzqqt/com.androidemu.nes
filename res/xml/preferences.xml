@@ -87,6 +87,8 @@
                 <com.androidemu.nes.KeyPreference android:title="@string/quick_save" android:key="quickSave" />
                 <com.androidemu.nes.KeyPreference android:title="@string/fast_forward" android:key="fastForward" />
                 <com.androidemu.nes.KeyPreference android:title="@string/screenshot" android:key="screenshot" />
+                <com.androidemu.nes.KeyPreference android:title="@string/reset" android:key="quickReset" />
+                <com.androidemu.nes.KeyPreference android:title="@string/power" android:key="quickPower" />
             </PreferenceScreen>
         </PreferenceCategory>
     </PreferenceScreen>

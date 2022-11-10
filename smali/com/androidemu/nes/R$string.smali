@@ -101,6 +101,8 @@
 
 .field public static final fast_forward_speed:I = 0x7f070050
 
+.field public static final fast_forward_toggle:I = 0x7f0700b8
+
 .field public static final fds_rom:I = 0x7f07008b
 
 .field public static final frame_skip_mode:I = 0x7f070052

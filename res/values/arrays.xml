@@ -74,7 +74,7 @@
         <item>@string/save_state</item>
         <item>@string/settings</item>
         <item>@string/change_disk</item>
-        <item>@string/fast_forward</item>
+        <item>@string/fast_forward_toggle</item>
         <item>@string/cheats</item>
         <item>@string/netplay_connect</item>
         <item>@string/reset</item>

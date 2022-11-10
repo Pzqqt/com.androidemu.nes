@@ -40,6 +40,7 @@
     <string name="netplay_sync">Sync</string>
     <string name="fast_forward">Fast forward</string>
     <string name="no_fast_forward">Regular</string>
+    <string name="fast_forward_toggle">Toggle fast forward</string>
     <string name="screenshot">Screenshot</string>
     <string name="screenshot_saved">Screenshot saved to Gallery.</string>
     <string name="save_state">Save</string>
@@ -159,7 +160,7 @@ To add cheats, press "<b><font fgcolor="#ffffffff">Menu</font></b> and then <b><
     <string name="hide_navigation_bar">Hide navigation bar</string>
     <string name="hide_navigation_bar_summary">Hide navigation bar on Android 4.4+</string>
     <string name="occupy_cutout_area">Allow to occupy cutout area</string>
-    <string name="occupy_cutout_area_summary">The game screen and virtual keyboard will occupy the cutout area</string>
+    <string name="occupy_cutout_area_summary">The game screen and virtual keyboard will be extended to the cutout area</string>
     <string name="orientation">Orientation</string>
     <string name="orientation_summary">The game screen orientation</string>
     <string name="quick_load_on_start">Quick load on start</string>

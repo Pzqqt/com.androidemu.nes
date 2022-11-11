@@ -26,6 +26,8 @@
 
 .field private static final DIALOG_WIFI_CONNECT:I = 0x3
 
+.field private static final DIALOG_NETPLAY_CONNECT:I = 0x4
+
 .field private static final GAMEPAD_DIRECTION:I = 0xf0
 
 .field private static final GAMEPAD_LEFT_RIGHT:I = 0xc0
@@ -447,10 +449,12 @@
 .end method
 
 .method static synthetic access$showNetplayConnectDialog(Lcom/androidemu/nes/EmulatorActivity;)V
-    .locals 0
+    .locals 1
     .param p0, "x0"    # Lcom/androidemu/nes/EmulatorActivity;
 
-    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->showNetplayConnectDialog()V
+    const/4 v0, 0x4
+
+    invoke-virtual {p0, v0}, Lcom/androidemu/nes/EmulatorActivity;->showDialog(I)V
 
     return-void
 .end method
@@ -701,7 +705,7 @@
     return-object v1
 .end method
 
-.method private showNetplayConnectDialog()V
+.method private createNetplayConnectDialog()Landroid/app/Dialog;
     .locals 6
 
     .prologue
@@ -766,9 +770,7 @@
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
-
-    return-void
+    return-object v1
 .end method
 
 .method private createReplaceGameDialog()Landroid/app/Dialog;
@@ -3635,6 +3637,13 @@
 
     goto :goto_0
 
+    :pswitch_3
+    invoke-direct {p0}, Lcom/androidemu/nes/EmulatorActivity;->createNetplayConnectDialog()Landroid/app/Dialog;
+
+    move-result-object v0
+
+    goto :goto_0
+
     .line 248
     nop
 
@@ -3643,6 +3652,7 @@
         :pswitch_0
         :pswitch_1
         :pswitch_2
+        :pswitch_3
     .end packed-switch
 .end method
 

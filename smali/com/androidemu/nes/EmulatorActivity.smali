@@ -4655,7 +4655,7 @@
 
     .local v0, "decorView":Landroid/view/View;
 
-    const/16 v3, 0x00000100    # View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+    const/16 v3, 0x100    # View.SYSTEM_UI_FLAG_LAYOUT_STABLE
 
     .local v3, "systemUiFlags":I
 
@@ -4736,6 +4736,7 @@
     :goto_ff
     return-void
 .end method
+
 .method public onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
     .locals 10
     .param p1, "prefs"    # Landroid/content/SharedPreferences;

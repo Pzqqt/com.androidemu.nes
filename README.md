@@ -58,16 +58,17 @@ This repository is based on reverse engineering of the final version (versionCod
 
 > The core of this emulator is based on FCEU, so its compatibility is good. But:
 > 1. [UNIF (Universal NES Interchange format)](https://www.nesdev.org/wiki/UNIF) format roms are not supported
-> 2. Some weird XXX-in-1 roms are not supported
-> 3. The roms of some Chinese pirated manufacturers are not supported
-> 4. Rom support for mapper 163 is not good (many of the roms of China NanJing Technology (南晶科技) are mapper 163)
+> 2. The roms of some Chinese pirated manufacturers are not supported
+> 3. Rom support for mapper 163 is not good (many of the roms of China NanJing Technology (南晶科技) are mapper 163)
 
 5. Is Net-play available?
 
 > Yes! I tested it on a Redmi Note 5 Pro with Android 11 and another Redmi K30 with Android 12.1, and it works fine with both Bluetooth and WiFi.
 
 6. Is Zapper available?
+
 > Yes, but you need to turn off the virtual keyboard first.
 
 7. Why is the input method keyboard sometimes displayed when entering the game?
+
 > Turn on "Use input method" in app settings, do not ask me why.

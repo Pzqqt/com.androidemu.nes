@@ -58,9 +58,8 @@ Nesoid是一个很古老的适用于Android设备的NES模拟器，它诞生于A
 
 > 这个模拟器的核心基于FCEU，因此它的兼容性很好。但是：
 > 1. 不支持[UNIF（Universal NES Interchange format）](https://www.nesdev.org/wiki/UNIF)格式的rom
-> 2. 不支持某些奇葩的合卡rom
-> 3. 不支持某些国产寨商的rom
-> 4. 对mapper 163的rom支持不是很好（南晶科技的rom绝大多数都是mapper 163）
+> 2. 不支持某些国产寨商的rom
+> 3. 对mapper 163的rom支持不是很好（南晶科技的rom绝大多数都是mapper 163）
 
 5. 网络对战功能可用吗？
 
@@ -71,4 +70,5 @@ Nesoid是一个很古老的适用于Android设备的NES模拟器，它诞生于A
 > 可以的，但是你需要先关闭虚拟键盘。
 
 7. 为什么有时候进入游戏时输入法会弹出来？
-> 在app设置中把“输入设备”开关打开，不论你有没有使用其他的输入设备，也不要问我为什么。
+
+> 在app设置中把“使用输入法”开关打开，不要问我为什么。

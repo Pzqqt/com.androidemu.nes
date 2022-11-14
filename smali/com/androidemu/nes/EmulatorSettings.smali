@@ -381,6 +381,70 @@
     return-void
 .end method
 
+.method private static getAppVersionString(Landroid/content/Context;)Ljava/lang/String;
+    .locals 6
+    .param p0, "context"    # Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+    .local v0, "manager":Landroid/content/pm/PackageManager;
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v2
+    .local v2, "packageInfo":Landroid/content/pm/PackageInfo;
+
+    iget v3, v2, Landroid/content/pm/PackageInfo;->versionCode:I
+    .local v3, "versionCode":I
+
+    iget-object v4, v2, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+    .local v4, "versionName":Ljava/lang/String;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "-"
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+    .local v5, "versionString":Ljava/lang/String;
+
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v5
+
+    invoke-virtual {v5}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
+
+    const-string v5, "Unknown"
+
+    :goto_0
+    return-object v5
+.end method
+
 .method private enableDisablePad2(Ljava/lang/String;)V
     .locals 2
     .param p1, "device"    # Ljava/lang/String;
@@ -1032,7 +1096,6 @@
 
     move-result-object v7
 
-    .line 216
     invoke-virtual {v6, v7}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
     const-string v6, "github"
@@ -1046,6 +1109,22 @@
     move-result-object v8
 
     invoke-virtual {v7, v8}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
+
+    const-string v6, "version"
+
+    invoke-virtual {p0, v6}, Lcom/androidemu/nes/EmulatorSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v6
+
+    invoke-virtual {p0}, Lcom/androidemu/nes/EmulatorSettings;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v7
+
+    invoke-static {v7}, Lcom/androidemu/nes/EmulatorSettings;->getAppVersionString(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 223
     return-void

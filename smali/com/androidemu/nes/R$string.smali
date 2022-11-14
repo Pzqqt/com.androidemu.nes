@@ -355,6 +355,8 @@
 
 .field public static final user_settings:I = 0x7f07008c
 
+.field public static final version:I = 0x7f0700b9
+
 .field public static final video_settings:I = 0x7f07004d
 
 .field public static final vkeypad_layout:I = 0x7f07007a

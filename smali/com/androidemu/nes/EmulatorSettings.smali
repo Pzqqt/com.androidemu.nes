@@ -589,7 +589,7 @@
 
     const-string v1, "android.intent.action.VIEW"
 
-    const-string v2, "https://github.com/Pzqqt/com.androidemu.nes_61"
+    const-string v2, "https://github.com/Pzqqt/com.androidemu.nes"
 
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 

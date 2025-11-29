@@ -39,36 +39,48 @@ This repository is based on reverse engineering of the final version (versionCod
 
 ## FAQ
 
-1. Why decompile the apk instead of recompiling it from source?
+- Why decompile the apk instead of recompiling it from source?
 
 > For three reasons：
 > 1. Ancient stuff should keep it ancient, but also means compatibility
 > 2. The source code for the latest version (`62-2.5.0`) can't seem to be found on the web
 > 3. I'm lazy:)
 
-2. Why do I experience dropped frames when playing games?
+- APK installation failed?
+
+> Because the SDK version of this APK is too old, it may be rejected for installation on the latest Android systems.
+>
+> In this situation, please enable ADB debugging on your Android device, then connect it to your PC and install using ADB commands:
+>
+>> `adb install <apk file path>`
+>
+> If the installation still fails, try adding the `--bypass-low-target-sdk-block` parameter:
+>
+>> `adb install --bypass-low-target-sdk-block <apk file path>`
+
+- Why do I experience dropped frames when playing games?
 
 > Most likely it's because your device's screen refresh rate is higher than 60. Please lock the screen refresh rate to 60 in system settings.
 
-3. Does it support FDS roms?
+- Does it support FDS roms?
 
 > Yes, but you need the disk drive system file (disksys.rom), then import it in the emulator settings.
 
-4. Which roms does it support?
+- Which roms does it support?
 
 > The core of this emulator is based on FCEU, so its compatibility is good. But:
 > 1. [UNIF (Universal NES Interchange format)](https://www.nesdev.org/wiki/UNIF) format roms are not supported
 > 2. The roms of some Chinese pirated manufacturers are not supported
 > 3. Rom support for mapper 163 is not good (many of the roms of China NanJing Technology (南晶科技) are mapper 163)
 
-5. Is Net-play available?
+- Is Net-play available?
 
 > Yes! I tested it on a Redmi Note 5 Pro with Android 11 and another Redmi K30 with Android 12.1, and it works fine with both Bluetooth and WiFi.
 
-6. Is Zapper available?
+- Is Zapper available?
 
 > Yes, but you need to turn off the virtual keyboard first.
 
-7. Why is the input method keyboard sometimes displayed when entering the game?
+- Why is the input method keyboard sometimes displayed when entering the game?
 
 > Turn on "Use input method" in app settings, do not ask me why.

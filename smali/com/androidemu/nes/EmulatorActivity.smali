@@ -4983,18 +4983,9 @@
     .line 502
     const-string v5, "autoSyncClientInterval"
 
-    const-string v6, "10"
+    const/4 v6, 0x5
 
-    invoke-interface {v4, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 501
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
+    invoke-interface {v4, v5, v6}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v4
 

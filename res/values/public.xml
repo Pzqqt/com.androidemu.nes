@@ -35,7 +35,6 @@
     <public type="array" name="vkeypad_size_entryvalues" id="0x7f060007" />
     <public type="array" name="vkeypad_layout_entryvalues" id="0x7f060008" />
     <public type="array" name="orientation_entryvalues" id="0x7f060009" />
-    <public type="array" name="auto_sync_client_entryvalues" id="0x7f06000a" />
     <public type="array" name="exit_game_options" id="0x7f06000b" />
     <public type="array" name="scaling_mode_entries" id="0x7f06000c" />
     <public type="array" name="aspect_ratio_entries" id="0x7f06000d" />
@@ -45,7 +44,6 @@
     <public type="array" name="vkeypad_size_entries" id="0x7f060011" />
     <public type="array" name="vkeypad_layout_entries" id="0x7f060012" />
     <public type="array" name="orientation_entries" id="0x7f060013" />
-    <public type="array" name="auto_sync_client_entries" id="0x7f060014" />
     <public type="string" name="app_label" id="0x7f070000" />
     <public type="string" name="emulator_service_running" id="0x7f070001" />
     <public type="string" name="launcher_shortcut_name" id="0x7f070002" />

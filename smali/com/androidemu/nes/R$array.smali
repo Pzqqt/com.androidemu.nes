@@ -19,10 +19,6 @@
 
 .field public static final aspect_ratio_entryvalues:I = 0x7f060002
 
-.field public static final auto_sync_client_entries:I = 0x7f060014
-
-.field public static final auto_sync_client_entryvalues:I = 0x7f06000a
-
 .field public static final exit_game_options:I = 0x7f06000b
 
 .field public static final fast_forward_speed_entryvalues:I = 0x7f060003

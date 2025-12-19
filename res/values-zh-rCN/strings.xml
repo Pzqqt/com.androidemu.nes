@@ -172,7 +172,7 @@ IP: %1$s
     <string name="legal">法律声明</string>
     <string name="press_key_prompt">请按下物理按键...</string>
     <string name="key_none">&lt;空&gt;</string>
-    <string name="key_unknown">&lt;未知&gt;</string>
+    <string name="key_unknown">&lt;未知 (%1$d)&gt;</string>
     <string name="key_clear">清除</string>
     <string name="gamepad_up">↑</string>
     <string name="gamepad_down">↓</string>

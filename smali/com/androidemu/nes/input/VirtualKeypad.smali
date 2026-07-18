@@ -508,6 +508,10 @@
     .line 327
     iget v1, p0, Lcom/androidemu/nes/input/VirtualKeypad;->pointSizeThreshold:F
 
+    cmpl-float v0, v2, v1
+
+    if-eqz v0, :cond_0
+
     cmpl-float v1, p4, v1
 
     if-lez v1, :cond_0
@@ -2346,7 +2350,7 @@
     iput-boolean v0, v1, Lcom/androidemu/nes/input/VirtualKeypad;->inBetweenPress:Z
 
     .line 108
-    const/high16 v14, 0x3f800000    # 1.0f
+    const/4 v14, 0x0
 
     move v0, v14
 
